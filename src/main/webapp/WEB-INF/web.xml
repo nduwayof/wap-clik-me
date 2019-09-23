@@ -5,6 +5,7 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+
   <context-param>
     <param-name>imageUploads</param-name>
     <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads</param-value>
