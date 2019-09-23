@@ -1,4 +1,4 @@
-package edu.mum.cs.domain.advertisement;
+package edu.mum.cs.domain;
 
 import lombok.Data;
 import lombok.Generated;
