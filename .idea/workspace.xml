@@ -8,19 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5301bbb-aa93-475d-8967-64628f8efc10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/wap_project.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/hibernate/HibernateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/wap_project.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wap_project/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/hibernate/HibernateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wap_project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/dao/GenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/dao/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/dao/user/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/dao/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/dao/GenericDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/dao/user/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/dao/user/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UserTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -302,7 +298,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569189405018</updated>
       <workItem from="1569189410964" duration="18129000" />
-      <workItem from="1569259120619" duration="1861000" />
+      <workItem from="1569259120619" duration="2579000" />
     </task>
     <servers />
   </component>

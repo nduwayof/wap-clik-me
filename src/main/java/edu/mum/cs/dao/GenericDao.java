@@ -10,10 +10,10 @@ import java.util.List;
 
 public abstract class GenericDao<T> {
 
-    public SessionFactory sessionFactory;
-    public Class<T> typeParameterClass;
+    private SessionFactory sessionFactory;
+    protected Class<T> typeParameterClass;
 
-    public GenericDao(){
+    protected GenericDao(){
         sessionFactory = HibernateUtil.getSessionFactory();
     }
 
@@ -25,6 +25,13 @@ public abstract class GenericDao<T> {
         List<T> ts = session.createQuery(criteriaQuery).getResultList();
         session.close();
         return ts;
+    }
+
+    public T findById(long id){
+        Session session = sessionFactory.openSession();
+        T t = session.get(typeParameterClass, id);
+        session.close();
+        return  t;
     }
 
     public void save(T t){
