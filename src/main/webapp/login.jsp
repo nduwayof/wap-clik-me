@@ -44,14 +44,14 @@
                         <p>
                             Don’t use MumBook Yet? <a href="landing.html#" title="">Take the tour</a> or <a href="landing.html#" title="">Join now</a>
                         </p>
-                        <form method="post">
+                        <form method="post" action="login">
                             <div class="form-group">
-                                <input type="text" id="input" required="required"/>
-                                <label class="control-label" for="input">Username</label><i class="mtrl-select"></i>
+                                <input type="text" id="username" required="required"/>
+                                <label class="control-label" for="username">Username</label><i class="mtrl-select"></i>
                             </div>
                             <div class="form-group">
-                                <input type="password" required="required"/>
-                                <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
+                                <input type="password" id="password"required="required"/>
+                                <label class="control-label" for="password">Password</label><i class="mtrl-select"></i>
                             </div>
                             <div class="checkbox">
                                 <label>
@@ -60,7 +60,7 @@
                             </div>
                             <a href="landing.html#" title="" class="forgot-pwd">Forgot Password?</a>
                             <div class="submit-btns">
-                                <button class="mtr-btn signin" type="button"><span>Login</span></button>
+                                <button class="mtr-btn signin" type="button" id="btn"><span>Login</span></button>
                                 <button class="mtr-btn signup" type="button"><span>Register</span></button>
                             </div>
                         </form>
@@ -70,18 +70,18 @@
                         <p>
                             Don’t use MumBook Yet? <a href="javascript:void(0)" title="">Take the tour</a> or <a href="javascript:void(0)" title="">Join now</a>
                         </p>
-                        <form method="post">
+                        <form method="post" >
                             <div class="form-group">
                                 <input type="text" required="required"/>
-                                <label class="control-label" for="input">First & Last Name</label><i class="mtrl-select"></i>
+                                <label class="control-label" >First & Last Name</label><i class="mtrl-select"></i>
                             </div>
                             <div class="form-group">
-                                <input type="text" required="required"/>
-                                <label class="control-label" for="input">User Name</label><i class="mtrl-select"></i>
+                                <input type="text" name="userName" required="required"/>
+                                <label class="control-label" >User Name</label><i class="mtrl-select"></i>
                             </div>
                             <div class="form-group">
-                                <input type="password" required="required"/>
-                                <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
+                                <input type="password" name="password" required="required"/>
+                                <label class="control-label" >Password</label><i class="mtrl-select"></i>
                             </div>
                             <div class="form-radio">
                                 <div class="radio">
@@ -97,7 +97,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" required="required"/>
-                                <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83c6eee2eaefc3">[email&#160;protected]</a></label><i class="mtrl-select"></i>
+                                <label class="control-label" ><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83c6eee2eaefc3">[email&#160;protected]</a></label><i class="mtrl-select"></i>
                             </div>
                             <div class="checkbox">
                                 <label>

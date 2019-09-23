@@ -2,12 +2,34 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="wap_project:war" />
       <artifact name="wap_project:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5301bbb-aa93-475d-8967-64628f8efc10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Advertisement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Advertisement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/controller/AdvertisementServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/controller/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/themify.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/themify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/themify.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/themify.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/wap_project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/hibernate/HibernateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/wap_project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/hibernate/HibernateUtil.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +65,7 @@
         <option value="Tag Library Descriptor" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,12 +90,16 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1RD6dHuhjqJjXl30SMXQrRSELXn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AddBookAjaxAndPRG-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -177,16 +204,19 @@
     <configuration name="Tomcat 9.0.20" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.20" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
+        <artifact name="wap_project:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/wap_project_war" />
+          </settings>
+        </artifact>
         <artifact name="wap_project:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/wap_project_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_wap_project" />
-        <option name="HTTP_PORT" value="9090" />
-        <option name="JNDI_PORT" value="1090" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_wap-clik-me" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -194,7 +224,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="57777" />
+        <option name="DEBUG_PORT" value="51187" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -244,6 +274,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
+          <artifact name="wap_project:war" />
           <artifact name="wap_project:war exploded" />
         </option>
       </method>
@@ -282,7 +313,7 @@
       <updated>1569189405018</updated>
       <workItem from="1569189410964" duration="18129000" />
       <workItem from="1569213528346" duration="1211000" />
-      <workItem from="1569257426094" duration="3773000" />
+      <workItem from="1569257426094" duration="11126000" />
     </task>
     <servers />
   </component>
@@ -301,5 +332,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
