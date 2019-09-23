@@ -2,7 +2,7 @@ package edu.mum.cs.dao.user;
 
 import java.util.List;
 
-public interface IUserDao<T> {
+public interface IAbstractDao<T> {
     List<T> findAll();
     T findById(long id);
     void save(T t);
