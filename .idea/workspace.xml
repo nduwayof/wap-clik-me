@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5301bbb-aa93-475d-8967-64628f8efc10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Advertisement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/hibernate/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/hibernate/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wap_project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Advertisement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Advertisement.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -288,7 +282,7 @@
       <updated>1569189405018</updated>
       <workItem from="1569189410964" duration="18129000" />
       <workItem from="1569213528346" duration="1211000" />
-      <workItem from="1569257426094" duration="3290000" />
+      <workItem from="1569257426094" duration="3773000" />
     </task>
     <servers />
   </component>
