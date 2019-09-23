@@ -16,8 +16,6 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // display the user home with current posts
-        PrintWriter out = resp.getWriter();
-        out.println("cvb");
 
         // get the current posts for the user and user followers
         RequestDispatcher rd = req.getRequestDispatcher("views/user/home.jsp");

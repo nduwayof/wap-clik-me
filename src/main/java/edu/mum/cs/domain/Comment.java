@@ -3,13 +3,13 @@ package edu.mum.cs.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity(name = "notifications")
-public class Notification implements Serializable {
+@Entity
+public class Comment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    Long id;
     @OneToOne
-    private Post post;
+    Post post;
     @OneToOne
-    private User PostUser;
+    User user;
 }
