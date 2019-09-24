@@ -91,7 +91,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <h4 class="page-title">List of Users</h4>
+                    <h4 class="page-title">List of advertise</h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-right">
@@ -109,7 +109,7 @@
                         <div class="btn-group ">
                             <button class="btn btn-primary" id="user_form">
                                 <i class="fa fa-plus-circle"></i>
-                                New User
+                                New Advertise
                             </button>
                         </div>
                         <div class="table-responsive">

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@WebServlet(urlPatterns = "/list-users")
+@WebServlet(urlPatterns = "/users")
 public class UserController extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(UserController.class.getName());
@@ -17,7 +17,7 @@ public class UserController extends HttpServlet {
         try{
             request.getRequestDispatcher("list-users.jsp")
                     .forward(request, response);
-            response.sendRedirect("/list-users");
+            response.sendRedirect("/users");
         }catch (Exception ex){
             LOGGER.log(Level.SEVERE, ex.getMessage());
         }
