@@ -106,6 +106,70 @@
             <div class="col-12">
                 <div class="card m-b-30">
                     <div class="card-body">
+                        <form action="/users" method="post" id="save_user">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Enter first name" required/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Enter last name" required/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="email">Email <span class="text-danger">*</span></label>
+                                        <input type="text" name="email" id="email" class="form-control" placeholder="Enter last name" required/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="gender">Gender <span class="text-danger">*</span></label>
+                                        <select name="gender" id="gender" class="form-control">
+                                            <option disabled selected>--select gender--</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="password">Password <span class="text-danger">*</span></label>
+                                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" required/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm password <span class="text-danger">*</span></label>
+                                        <input type="password" name="email" id="confirmPassword" class="form-control" placeholder="Enter confirm password" required/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fa fa-save"></i>
+                                        SUBMIT
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
                         <div class="btn-group ">
                             <button class="btn btn-primary" id="user_form">
                                 <i class="fa fa-plus-circle"></i>
@@ -148,6 +212,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <footer class="footer">
@@ -158,5 +223,6 @@
 <script src="resources/assets/js/jquery.slimscroll.js"></script>
 <script src="resources/assets/js/waves.min.js"></script>
 <script src="resources/assets/js/app.js"></script>
+<script src="resources/assets/js/custom.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package edu.mum.cs.controller;
 
-import edu.mum.cs.dao.user.AbstractDao;
+import edu.mum.cs.dao.IAbstractDao;
+import edu.mum.cs.dao.user.UserDao;
 import edu.mum.cs.domain.User;
 
 import javax.servlet.RequestDispatcher;
@@ -15,10 +16,11 @@ import java.util.List;
 
 @WebServlet(name ="login",urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
-   private AbstractDao dao ;
+   private  IAbstractDao dao ;
 
+   @Override
     public void init() throws ServletException {
-        dao= new AbstractDao();
+        dao = new UserDao();
     }
 
     @Override
