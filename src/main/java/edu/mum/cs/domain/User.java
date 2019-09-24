@@ -18,7 +18,7 @@ public class User implements Serializable {
     private String name;
     private int age;
 
-    @Column(name = "gender", nullable = false)
+    @Column(name = "gender", nullable = true)
     @Enumerated(EnumType.STRING)
     private EGender gender;
     @Transient

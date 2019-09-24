@@ -4,7 +4,7 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-<<<<<<< HEAD
+
 
   <context-param>
     <param-name>imageUploads</param-name>
@@ -16,10 +16,5 @@
   </welcome-file-list>
 
 
-=======
-  <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
-  </welcome-file-list>
->>>>>>> 46a46945b6caef4fd5a54a7f204254a0f658bd0c
 </web-app>
 

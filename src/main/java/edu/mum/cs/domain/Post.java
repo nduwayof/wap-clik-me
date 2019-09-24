@@ -2,21 +2,24 @@ package edu.mum.cs.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name = "users")
+@Entity
 public class Post implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String details;
-    private Photo photo;
+    private String photo;
+    private LocalDateTime time;
     @OneToOne
     private User user;
     private Boolean enabled;
     @Transient
     private List<Comment> comments = new ArrayList<>();
+
     public Post() {
     }
 
@@ -36,11 +39,11 @@ public class Post implements Serializable {
         this.details = details;
     }
 
-    public Photo getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Photo photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 
@@ -68,8 +71,16 @@ public class Post implements Serializable {
         this.comments = comments;
     }
 
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
+    }
+
     @Override
-    public String toString() {
+    public java.lang.String toString() {
         return "Post{" +
                 "id=" + id +
                 ", details='" + details + '\'' +
