@@ -10,7 +10,7 @@ $(function () {
                 type: 'POST',
                 data: formData,
                 success: addPostSuccessFunction,
-                erro: addPostSuccessFunction,
+                error: addPostSuccessFunction,
                 cache: false,
                 contentType: false,
                 processData: false

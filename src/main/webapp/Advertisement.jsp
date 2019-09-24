@@ -21,7 +21,7 @@
                 <img src="images/resources/admin2.jpg" alt="">
           </figure>
 
-                <form method="post" action="ads"  enctype="multipart/form-data"   id="ads">
+                <form method="post" action="addAds"  enctype="multipart/form-data"   id="ads">
                     <input type="hidden" name="test" value="">
                     <div class="attachments">
 
@@ -32,20 +32,18 @@
                                <label class="title">
                                     <input type="text" name="txtTitle">
                                 </label>
+
                         <label class="company">
-                            <input type="text" name="txtTitle">
+                         <input type="text" name="company">
                         </label>
-                        <label>
+                        <label class="link">
                             <select>
-                                <option name="campany1">youtube</option>
-                                <option name="campany1">amazon</option>
-                                <option name="campany1">google</option>
+                                <option name="link1"><a href="https://www.youtube.com/watch?v=8sHU4HQtZo8&list=RDqJBeqxfH5JU&index=6">youtube</a></option>
+                                <option name="link2"><a href="https://www.amazon.com/amazonprime?_encoding=UTF8&ref_=nav_prime_member_btn">amazon</a></option>
+                                <option name="link3"><a>google</a></option>
                             </select>
                         </label>
-
-
-
-                                <button type="submit">Post</button>
+                        <button type="submit" id="btn">Add Ads</button>
                     </div>
                 </form>
             </div>
