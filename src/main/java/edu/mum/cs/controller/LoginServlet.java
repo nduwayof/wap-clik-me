@@ -1,29 +1,25 @@
 package edu.mum.cs.controller;
 
-import edu.mum.cs.dao.user.UserDao;
-import edu.mum.cs.domain.User;
+import edu.mum.cs.dao.user.AbstractDao;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+
 @WebServlet(name ="login",urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
-   private  UserDao dao ;
+   private AbstractDao dao ;
 
     public void init() throws ServletException {
-        dao= new UserDao();
+        dao= new AbstractDao();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, IOException {
-        request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
 
