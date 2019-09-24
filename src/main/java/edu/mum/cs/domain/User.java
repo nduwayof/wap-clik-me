@@ -12,11 +12,12 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-<<<<<<< HEAD
+
     private String firstName;
     private String lastName;
     private String email;
     private String password;
+    private String status;
 
     @Column(name = "access", nullable = false)
     @Enumerated(EnumType.STRING)
@@ -25,7 +26,7 @@ public class User implements Serializable {
     @Column(name = "gender", nullable = false)
     @Enumerated(EnumType.STRING)
     private EGender gender;
-=======
+
     private String name;
     private int age;
 
@@ -35,13 +36,14 @@ public class User implements Serializable {
     private EGender gender;
     @Transient
     List<Post> posts = new ArrayList<>();
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
 
 
     public User() {
     }
 
-<<<<<<< HEAD
+
+
     public User(String firstName, String lastName, String email, String password, Acesslevel access, EGender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -51,8 +53,7 @@ public class User implements Serializable {
         this.gender = gender;
     }
 
-=======
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
     public long getId() {
         return id;
     }
@@ -61,7 +62,7 @@ public class User implements Serializable {
         this.id = id;
     }
 
-<<<<<<< HEAD
+
     public String getFirstName() {
         return firstName;
     }
@@ -100,7 +101,7 @@ public class User implements Serializable {
 
     public void setAccess(Acesslevel access) {
         this.access = access;
-=======
+
     public String getName() {
         return name;
     }
@@ -115,7 +116,7 @@ public class User implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
     }
 
     public EGender getGender() {
@@ -125,15 +126,5 @@ public class User implements Serializable {
     public void setGender(EGender gender) {
         this.gender = gender;
     }
-<<<<<<< HEAD
-=======
 
-    public List<Post> getPosts() {
-        return posts;
-    }
-
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
-    }
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
 }

@@ -3,13 +3,13 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="wap_project:war" />
-<<<<<<< HEAD
+
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5301bbb-aa93-475d-8967-64628f8efc10" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
-=======
+
       <artifact name="wap_project:war exploded" />
     </artifacts-to-build>
   </component>
@@ -80,7 +80,7 @@
       <change beforePath="$PROJECT_DIR$/target/wap_project/views/user/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/views/user/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wap_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wap_project.iml" afterDir="false" />
     </list>
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +192,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
+
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -203,8 +203,7 @@
       </list>
     </option>
   </component>
-=======
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -244,7 +243,7 @@
     <option name="height" value="1041" />
   </component>
   <component name="ProjectId" id="1RD6dHuhjqJjXl30SMXQrRSELXn" />
-<<<<<<< HEAD
+
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -334,7 +333,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-=======
+
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -345,7 +344,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -377,11 +376,11 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
+
   <component name="RunManager" selected="Tomcat Server.tomcat">
-=======
+
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.45">
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
     <configuration name="UserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UserTest" />
       <module name="wap_project" />
@@ -616,13 +615,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.UserTest" />
-<<<<<<< HEAD
+
       <item itemvalue="JavaScript Debug.login.jsp" />
       <item itemvalue="Tomcat Server.tomcat" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.20" />
-=======
+
       <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
     </list>
     <recent_temporary>
       <list>
@@ -654,13 +653,13 @@
       <option name="presentableId" value="Default" />
       <updated>1569189405018</updated>
       <workItem from="1569189410964" duration="18129000" />
-<<<<<<< HEAD
+
       <workItem from="1569292782339" duration="2553000" />
-=======
+
       <workItem from="1569259120619" duration="15885000" />
       <workItem from="1569277800734" duration="203000" />
       <workItem from="1569278028024" duration="13593000" />
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
     </task>
     <servers />
   </component>
@@ -893,6 +892,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
   </component>
 </project>
