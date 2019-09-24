@@ -9,19 +9,20 @@
 <html>
 <head>
     <title>Ads</title>
-    //<link href="resources/css/ads.css" rel="stylesheet" type="text/css">
+    <link href="resources/css/ads.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 
-    <div id="adsContainer">
+<div id="adsContainer">
         <h1>Ads</h1>
-
-
-
-
-
+        <div id="company">
+            <!-- company-->
+        </div>
+    <div id="images">
+        <!-- image-->
     </div>
-</form>
+</div>
+
 </body>
 </html>

@@ -29,10 +29,12 @@ public class HomeServlet extends HttpServlet {
         Post post1 = new Post();
 
         User user = new User();
-        user.setName("Brian Bwengye");
+        user.setFirstName("Brian");
+        user.setLastName("Bwengye");
 
         User user2 = new User();
-        user2.setName("Nduwayo Fabrice");
+        user2.setFirstName("Fabrice");
+        user2.setLastName("Nduwayo");
 
         post1.setDetails("Hello I love New York ");
         post1.setUser(user);
@@ -53,7 +55,8 @@ public class HomeServlet extends HttpServlet {
         posts.add(post3);
         req.setAttribute("posts",posts);
 
-        user.setName("Brian Bwengye");
+        user.setFirstName("Brian");
+        user.setLastName("Bwengye");
         req.setAttribute("user",user);
         // get the current posts for the user and user followers
         RequestDispatcher rd = req.getRequestDispatcher("views/user/home.jsp");

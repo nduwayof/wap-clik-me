@@ -6,6 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
 
 
+
   <context-param>
     <param-name>imageUploads</param-name>
     <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads</param-value>
@@ -14,7 +15,6 @@
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
-
 
 </web-app>
 

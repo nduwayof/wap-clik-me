@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
 jQuery(document).ready(function($) {
 	
 	"use strict";
@@ -416,6 +419,8 @@ $(".new-postbox").click(function () {
 
 
 
+<<<<<<< HEAD
+=======
 =======
 jQuery(document).ready(function($) {
 	
@@ -835,3 +840,4 @@ $(".new-postbox").click(function () {
 
 
 >>>>>>> 46a46945b6caef4fd5a54a7f204254a0f658bd0c
+>>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4

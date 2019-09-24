@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
 //google map
 if ($("#map-canvas").length) {
 jQuery(document).ready(function($) {
@@ -59,6 +62,8 @@ jQuery(document).ready(function($) {
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 });
+<<<<<<< HEAD
+=======
 =======
 //google map
 if ($("#map-canvas").length) {
@@ -121,4 +126,5 @@ jQuery(document).ready(function($) {
 		google.maps.event.addDomListener(window, 'load', initialize);
 });
 >>>>>>> 46a46945b6caef4fd5a54a7f204254a0f658bd0c
+>>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
 }
