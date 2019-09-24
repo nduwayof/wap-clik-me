@@ -54,7 +54,6 @@ public class PostServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println(UPLOAD_DIRECTORY);
 
-        //req.getRequestDispatcher("home").forward(req, resp);
 
     }
 

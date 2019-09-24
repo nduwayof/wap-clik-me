@@ -8,12 +8,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5301bbb-aa93-475d-8967-64628f8efc10" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/servlet/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/servlet/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/hibernate/HibernateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/servlet/PostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/servlet/PostServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/navbar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/dao/user/IUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/dao/user/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/Notification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/Notification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/hibernate/HibernateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/servlet/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/servlet/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs/servlet/PostServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs/servlet/PostServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/dao/user/IUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/dao/user/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/Notification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/Notification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/hibernate/HibernateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/servlet/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/servlet/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/servlet/PostServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/classes/edu/mum/cs/servlet/PostServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/admin-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/admin-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/admin-login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/admin-login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wap_project/views/user/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/views/user/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wap_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wap_project.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,14 +121,14 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp" />
       <recent name="C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -307,6 +333,7 @@
       <updated>1569189405018</updated>
       <workItem from="1569189410964" duration="18129000" />
       <workItem from="1569259120619" duration="15885000" />
+      <workItem from="1569278848445" duration="3290000" />
     </task>
     <servers />
   </component>
