@@ -3,10 +3,8 @@ $(function () {
     (function () {
         $(document).on('submit','#addPost',function(e) {
             e.preventDefault();
-            alert('clicked');
             //$('#alert-info').html('Saving......');
             var formData = new FormData(this);
-            alert(formData);
             $.ajax({
                 url: $(this).attr("action"),
                 type: 'POST',
