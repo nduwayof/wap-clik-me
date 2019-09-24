@@ -7,14 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5301bbb-aa93-475d-8967-64628f8efc10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Filter/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/controller/LogoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Advertisement.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/ads.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/controller/AdvertisementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/controller/AdvertisementServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Advertisement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Advertisement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/advertisement/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wap_project/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/wap_project/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/ads.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +48,8 @@
         <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -85,6 +84,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AddBookAjaxAndPRG-master" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -110,13 +110,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.20">
+  <component name="RunManager" selected="JavaScript Debug.Advertisement.jsp (1)">
     <configuration name="UserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UserTest" />
       <module name="wap_project" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Advertisement.jsp (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/wap_project_war_exploded/Advertisement.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="Advertisement.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/wap_project_war/Advertisement.jsp">
+      <method v="2" />
     </configuration>
     <configuration default="true" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="PORT" value="7001" />
@@ -184,6 +190,78 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Advertisement.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.20" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Advertisement.jsp" />
+      <deployment>
+        <artifact name="wap_project:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/wap_project_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Advertisement_jsp_wap-clik-me" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54884" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="wap_project:war" />
+        </option>
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.20" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.20" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -297,11 +375,17 @@
     </configuration>
     <list>
       <item itemvalue="Application.UserTest" />
+      <item itemvalue="JavaScript Debug.Advertisement.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.20" />
       <item itemvalue="Tomcat Server.login.jsp" />
+      <item itemvalue="Tomcat Server.Advertisement.jsp" />
+      <item itemvalue="JavaScript Debug.Advertisement.jsp (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Advertisement.jsp (1)" />
+        <item itemvalue="JavaScript Debug.Advertisement.jsp" />
+        <item itemvalue="Tomcat Server.Advertisement.jsp" />
         <item itemvalue="Tomcat Server.login.jsp" />
         <item itemvalue="Application.UserTest" />
       </list>
@@ -331,7 +415,7 @@
       <updated>1569189405018</updated>
       <workItem from="1569189410964" duration="18129000" />
       <workItem from="1569213528346" duration="1211000" />
-      <workItem from="1569257426094" duration="17315000" />
+      <workItem from="1569257426094" duration="21653000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1569273790688</created>
@@ -340,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569273790688</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1569279974152</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569279974152</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

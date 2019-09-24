@@ -1,6 +1,7 @@
 package edu.mum.cs.controller;
 
 import edu.mum.cs.dao.user.UserDao;
+import edu.mum.cs.domain.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,25 +27,26 @@ public class LoginServlet extends HttpServlet {
     }
 
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("userName");
-        String password = req.getParameter("password");
-
-            for(User u:dao.getAllCustomers()) {
-
-            if((username.equals(u.getUsername()))  &&(password.equals(u.getPassword()))){
-
-                HttpSession session = req.getSession();
-                session.setAttribute("username", username);
-                session.setAttribute("password", password);
-                RequestDispatcher dispatcher = req.getRequestDispatcher("home.jsp");
-                dispatcher.forward(req,resp);
-            }
-
-            else {
-                doGet(req,resp);
-            }
-        }
-    }
+//    @Override
+//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        String username = req.getParameter("userName");
+//        String password = req.getParameter("password");
+//
+//            for(User u: dao.getAllCustomers()) {// use method from db
+//
+//            if((username.equals(u.getUsername()))  &&(password.equals(u.getPassword()))){ // use method from User class
+//
+//                HttpSession session = req.getSession();
+//                session.setAttribute("username", username);
+//                session.setAttribute("password", password);
+//                RequestDispatcher dispatcher = req.getRequestDispatcher("home.jsp");
+//                session.setAttribute("user",u);
+//                dispatcher.forward(req,resp);
+//            }
+//
+//            else {
+//                doGet(req,resp);
+//            }
+//        }
+//    }
 }
