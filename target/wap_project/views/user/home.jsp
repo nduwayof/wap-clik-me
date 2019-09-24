@@ -1376,7 +1376,11 @@
 <script src="resources/js/map-init.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
+<<<<<<< HEAD
 <script src="resources/js/views/user/post.js" type="text/javascript"></script>
+=======
+<script src="../../../resources/js/views/user/post.js" type="text/javascript"></script>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
 
 </body>
 </html>

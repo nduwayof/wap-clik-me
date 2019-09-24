@@ -86,7 +86,6 @@ public class PostServlet extends HttpServlet {
 
 
 
-        //req.getRequestDispatcher("home").forward(req, resp);
 
     }
 

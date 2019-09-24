@@ -31,8 +31,118 @@
 %>
 <div class="header-bg">
     <header id="topnav">
+<<<<<<< HEAD
         <jsp:include page="layout/header.jsp"/>
         <jsp:include page="layout/navbar.jsp"/>
+=======
+        <div class="topbar-main">
+            <div class="container-fluid">
+                <div>
+                    <a href="/admin-dashboard" class="logo">
+                        <span class="logo-light">
+                            <i class="mdi mdi-camera-control"></i> MumBook
+                        </span>
+                    </a>
+                </div>
+                <div class="menu-extras topbar-custom navbar p-0">
+                    <ul class="navbar-right ml-auto list-inline float-right mb-0">
+                        <!-- full screen -->
+                        <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                            <a class="nav-link waves-effect" href="/admin-dashboard" id="btn-fullscreen">
+                                <i class="mdi mdi-arrow-expand-all noti-icon"></i>
+                            </a>
+                        </li>
+
+                        <!-- notification -->
+                        <li class="dropdown notification-list list-inline-item">
+                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="/admin-dashboard" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="mdi mdi-bell-outline noti-icon"></i>
+                                <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-menu-lg px-1">
+                                <!-- item-->
+                                <h6 class="dropdown-item-text">
+                                    Notifications
+                                </h6>
+                                <div class="slimscroll notification-item-list">
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                        <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                        <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
+                                        <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-info"><i class="mdi mdi-filter-outline"></i></div>
+                                        <p class="notify-details"><b>Your item is shipped</b><span class="text-muted">It is a long established fact that a reader will</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-success"><i class="mdi mdi-message-text-outline"></i></div>
+                                        <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-warning"><i class="mdi mdi-cart-outline"></i></div>
+                                        <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                                    </a>
+
+                                </div>
+                                <!-- All-->
+                                <a href="javascript:void(0);" class="dropdown-item text-center notify-all text-primary">
+                                    View all <i class="fi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown notification-list list-inline-item">
+                            <div class="dropdown notification-list nav-pro-img">
+                                <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="resources/assets/images/users/user-4.jpg" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <a class="dropdown-item text-danger" href="/admin-logout"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item dropdown notification-list list-inline-item">
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <div id="navigation">
+                    <ul class="navigation-menu">
+                        <li class="has-submenu">
+                            <a href="/admin-dashboard"><i class="icon-accelerator"></i> Dashboard</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="/list-users"><i class="icon-profile"></i> Users</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
     </header>
 </div>
 <div class="wrapper">
@@ -128,6 +238,7 @@
             <div class="col-xl-8">
                 <div class="card m-b-30">
                     <div class="card-body">
+<<<<<<< HEAD
 
                         <h4 class="mt-0 header-title mb-4">Area Chart</h4>
 
@@ -137,11 +248,19 @@
                 </div>
             </div>
             <!-- end col -->
+=======
+                        <h4 class="mt-0 header-title mb-4">Area Chart</h4>
+                        <div id="morris-area-example" class="morris-charts morris-chart-height"></div>
+                    </div>
+                </div>
+            </div>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
 
             <div class="col-xl-4">
                 <div class="card m-b-30">
                     <div class="card-body">
                         <h4 class="mt-0 header-title mb-4">Donut Chart</h4>
+<<<<<<< HEAD
 
                         <div id="morris-donut-example" class="morris-charts morris-chart-height"></div>
 
@@ -151,6 +270,13 @@
             <!-- end col -->
         </div>
         <!-- end row -->
+=======
+                        <div id="morris-donut-example" class="morris-charts morris-chart-height"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
 
         <div class="row">
             <div class="col-xl-4">
@@ -158,10 +284,17 @@
                     <div class="card-body">
                         <h4 class="mt-0 header-title mb-4">Friends Suggestions</h4>
                         <div class="friends-suggestions">
+<<<<<<< HEAD
                             <a href="index.html#" class="friends-suggestions-list">
                                 <div class="border-bottom position-relative">
                                     <div class="float-left mb-0 mr-3">
                                         <img src="assets/images/users/user-2.jpg" alt="" class="rounded-circle thumb-md">
+=======
+                            <a href="/admin-dashboard" class="friends-suggestions-list">
+                                <div class="border-bottom position-relative">
+                                    <div class="float-left mb-0 mr-3">
+                                        <img src="resources/assets/images/users/user-2.jpg" alt="" class="rounded-circle thumb-md">
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                     </div>
                                     <div class="suggestion-icon float-right mt-2 pt-1">
                                         <i class="mdi mdi-plus"></i>
@@ -174,10 +307,17 @@
                                 </div>
                             </a>
 
+<<<<<<< HEAD
                             <a href="index.html#" class="friends-suggestions-list">
                                 <div class="border-bottom position-relative">
                                     <div class="float-left mb-0 mr-3">
                                         <img src="assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-md">
+=======
+                            <a href="/admin-dashboard" class="friends-suggestions-list">
+                                <div class="border-bottom position-relative">
+                                    <div class="float-left mb-0 mr-3">
+                                        <img src="resources/assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-md">
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                     </div>
                                     <div class="suggestion-icon float-right mt-2 pt-1">
                                         <i class="mdi mdi-plus"></i>
@@ -190,10 +330,17 @@
                                 </div>
                             </a>
 
+<<<<<<< HEAD
                             <a href="index.html#" class="friends-suggestions-list">
                                 <div class="border-bottom position-relative">
                                     <div class="float-left mb-0 mr-3">
                                         <img src="assets/images/users/user-4.jpg" alt="" class="rounded-circle thumb-md">
+=======
+                            <a href="/admin-dashboard" class="friends-suggestions-list">
+                                <div class="border-bottom position-relative">
+                                    <div class="float-left mb-0 mr-3">
+                                        <img src="resources/assets/images/users/user-4.jpg" alt="" class="rounded-circle thumb-md">
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                     </div>
                                     <div class="suggestion-icon float-right mt-2 pt-1">
                                         <i class="mdi mdi-plus"></i>
@@ -205,6 +352,7 @@
                                     </div>
                                 </div>
                             </a>
+<<<<<<< HEAD
 
                             <a href="index.html#" class="friends-suggestions-list">
                                 <div class="border-bottom position-relative">
@@ -226,6 +374,29 @@
                                 <div class="position-relative">
                                     <div class="float-left mb-0 mr-3">
                                         <img src="assets/images/users/user-6.jpg" alt="" class="rounded-circle thumb-md">
+=======
+
+                            <a href="/admin-dashboard" class="friends-suggestions-list">
+                                <div class="border-bottom position-relative">
+                                    <div class="float-left mb-0 mr-3">
+                                        <img src="resources/assets/images/users/user-5.jpg" alt="" class="rounded-circle thumb-md">
+                                    </div>
+                                    <div class="suggestion-icon float-right mt-2 pt-1">
+                                        <i class="mdi mdi-plus"></i>
+                                    </div>
+
+                                    <div class="desc">
+                                        <h5 class="font-14 mb-1 pt-2 text-dark">Bryan Lacy</h5>
+                                        <p class="text-muted">18 Friend suggest</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/admin-dashboard" class="friends-suggestions-list">
+                                <div class="position-relative">
+                                    <div class="float-left mb-0 mr-3">
+                                        <img src="resources/assets/images/users/user-6.jpg" alt="" class="rounded-circle thumb-md">
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                     </div>
                                     <div class="suggestion-icon float-right mt-2 pt-1">
                                         <i class="mdi mdi-plus"></i>
@@ -286,7 +457,10 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <!-- START ROW -->
+=======
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
         <div class="row">
             <div class="col-xl-12">
                 <div class="card m-b-30">
@@ -312,7 +486,11 @@
                                     <td>$9,420,000</td>
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <img src="assets/images/users/user-2.jpg" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
+=======
+                                            <img src="resources/ssets/images/users/user-2.jpg" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                     <td>Houston, TX 77074</td>
@@ -320,7 +498,11 @@
 
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <a href="index.html#" class="btn btn-primary btn-sm">Edit</a>
+=======
+                                            <a href="/admin-dashboard" class="btn btn-primary btn-sm">Edit</a>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                 </tr>
@@ -330,7 +512,11 @@
                                     <td>$3,120,000</td>
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <img src="assets/images/users/user-3.jpg" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
+=======
+                                            <img src="resources/assets/images/users/user-3.jpg" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                     <td>Oakland, CA 94612</td>
@@ -338,7 +524,11 @@
 
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <a href="index.html#" class="btn btn-primary btn-sm">Edit</a>
+=======
+                                            <a href="/admin-dashboard" class="btn btn-primary btn-sm">Edit</a>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                 </tr>
@@ -348,7 +538,11 @@
                                     <td>$6,360,000</td>
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <img src="assets/images/users/user-4.jpg" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
+=======
+                                            <img src="resources/assets/images/users/user-4.jpg" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                     <td>Hebron, ME 04238</td>
@@ -356,7 +550,11 @@
 
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <a href="index.html#" class="btn btn-primary btn-sm">Edit</a>
+=======
+                                            <a href="/admin-dashboard" class="btn btn-primary btn-sm">Edit</a>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                 </tr>
@@ -366,7 +564,11 @@
                                     <td>$5,200,000</td>
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <img src="assets/images/users/user-5.jpg" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
+=======
+                                            <img src="resources/assets/images/users/user-5.jpg" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                     <td>Salinas, CA 93901</td>
@@ -374,7 +576,11 @@
 
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <a href="index.html#" class="btn btn-primary btn-sm">Edit</a>
+=======
+                                            <a href="javascript:void(0)" class="btn btn-primary btn-sm">Edit</a>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                 </tr>
@@ -384,7 +590,11 @@
                                     <td>$7,250,000</td>
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <img src="assets/images/users/user-6.jpg" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
+=======
+                                            <img src="resources/assets/images/users/user-6.jpg" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                     <td>Cincinnati, OH 45202</td>
@@ -392,7 +602,11 @@
 
                                     <td>
                                         <div>
+<<<<<<< HEAD
                                             <a href="index.html#" class="btn btn-primary btn-sm">Edit</a>
+=======
+                                            <a href="javascript:void(0)" class="btn btn-primary btn-sm">Edit</a>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
                                         </div>
                                     </td>
                                 </tr>
@@ -406,7 +620,13 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <jsp:include page="layout/footer.jsp"/>
+=======
+<footer class="footer">
+    © 2019 MumBook <span class="d-none d-sm-inline-block"><i class="mdi mdi-heart text-danger"></i></span>.
+</footer>
+>>>>>>> 80e7ef8d19e13352ecd0c3fd663dbb64ebb487e0
 <script src="resources/assets/js/jquery.min.js"></script>
 <script src="resources/assets/js/bootstrap.bundle.min.js"></script>
 <script src="resources/assets/js/jquery.slimscroll.js"></script>
