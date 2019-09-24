@@ -50,11 +50,36 @@
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.8.5</version>
         </dependency>
+=======
+
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+
+
+>>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
     </dependencies>
     <build>
         <finalName>wap_project</finalName>
@@ -90,6 +115,19 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+<<<<<<< HEAD
+=======
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+>>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
         <resources>
             <resource>
                 <directory>src/main/webapp/resources</directory>

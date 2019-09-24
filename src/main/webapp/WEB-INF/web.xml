@@ -4,7 +4,23 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+<<<<<<< HEAD
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
+=======
+
+
+  <context-param>
+    <param-name>imageUploads</param-name>
+    <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads</param-value>
+  </context-param>
+
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+
+
+>>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
 </web-app>
+
