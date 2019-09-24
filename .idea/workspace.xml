@@ -506,9 +506,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.UserTest" />
+      <item itemvalue="JavaScript Debug.login.jsp" />
       <item itemvalue="Tomcat Server.tomcat" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.20" />
-      <item itemvalue="JavaScript Debug.login.jsp" />
     </list>
     <recent_temporary>
       <list>
