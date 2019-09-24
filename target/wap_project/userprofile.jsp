@@ -11,47 +11,64 @@
     <title>User profile</title>
     <style>
 
-          .userform{
+        .form-group {
 
             display: block;
-            width: 400px;
-            height: 200px;
-            border: solid 3px #b1dfbb;
 
+
+            border: solid 3px #b1dfbb;
 
 
         }
 
-  #space{
+        .postion {
+            width: 400px;
+            marrgin: auto;
+            border: solid 2px #0a98dc;
+            position: center;
 
-
-
-  }
+        }
 
 
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<div class="userform" id="space">
- <form action="userprofile" method="post" class="form">
+<div class="right">
+    <form method="post" action="/userprofile" class="postion">
+        <div>
+            <label>First Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="FirstName" name="fname" required>
 
-    <div>
-    <label>FirstName   <input type="text" name="fname" required title="your first name is important"></label>
-    </div>
-     <div>
-    <label>LastName     <input type="text" name="laname"required title="your last name is required"></label>
-     </div>
- <div>
-     <label>Email       <input type="email" name="email" required></label></div>
-    <div>
-        <label>password  <input type="password" name="pass" required></label></div>
-    <div>
-        <label>Followers   <input type="number" name="follow" required></label></div>
+        </div>
+        <div>
+            <label>Last Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail11" aria-describedby="emailHelp"
+                   placeholder="LastName" name="laname" required>
 
-    <button type="submit">save</button>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail111" aria-describedby="emailHelp"
+                   placeholder="---@gmail" name="Email" required>
 
- </form>
+        </div>
+        <div>
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass"
+                   required>
+        </div>
+
+        <div>
+            <label for="exampleInputPassword1">Repeat</label>
+            <input type="password" class="form-control" id="exampleInputPassword11" placeholder="Password"
+                   name="repass">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
-
 </body>
 </html>

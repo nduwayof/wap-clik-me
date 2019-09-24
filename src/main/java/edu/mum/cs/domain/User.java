@@ -1,7 +1,6 @@
 package edu.mum.cs.domain;
 
 
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -15,7 +14,6 @@ public class User implements Serializable {
     private String lastName;
     private String email;
     private String password;
-    private  int folowers;
 
     @Column(name = "access", nullable = false)
     @Enumerated(EnumType.STRING)
@@ -29,12 +27,11 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password, int folowers, Acesslevel access, EGender gender) {
+    public User(String firstName, String lastName, String email, String password, Acesslevel access, EGender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.folowers = folowers;
         this.access = access;
         this.gender = gender;
     }
@@ -77,14 +74,6 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public int getFolowers() {
-        return folowers;
-    }
-
-    public void setFolowers(int folowers) {
-        this.folowers = folowers;
     }
 
     public Acesslevel getAccess() {
