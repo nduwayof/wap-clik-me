@@ -30,13 +30,17 @@
         }
 
 
+
     </style>
+    <link href="userprofile.jsp">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <img id="loading" src="https://www.google.com/search?q=wait+loading+gif&tbm=isch&source=iu&ictx=1&fir=QIOAHrHmlwTnfM%253A%252C-M9VS2y-he5F1M%252C_&vet=1&usg=AI4_-kSFjT9tupoJ4XATYB3a5Y653Zu4MA&sa=X&ved=2ahUKEwi_2s3GrOjkAhVLh-AKHSC0BBsQ9QEwCHoECAcQFA#imgrc=MPbFAq7cnYfHrM:&vet=1">
 </head>
 <body>
 <div class="right">
-    <form method="post" action="/userprofile" class="postion">
+    <form action="/userprofile" class="postion">
         <div>
             <label>First Name</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -67,7 +71,7 @@
                    name="repass">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="submituser">Submit</button>
     </form>
 </div>
 </body>
