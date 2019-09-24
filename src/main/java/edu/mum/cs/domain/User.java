@@ -14,10 +14,8 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private String name;
     private int age;
-
     @Column(name = "gender", nullable = false)
     @Enumerated(EnumType.STRING)
     private EGender gender;
