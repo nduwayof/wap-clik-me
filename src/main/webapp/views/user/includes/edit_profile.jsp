@@ -4,7 +4,7 @@
 
         <form method="post">
             <div class="form-group half">
-                <input type="text" id="input" required="required"/>
+                <input type="text" id="input" value="${user.firstName}" required="required"/>
                 <label class="control-label" for="input">First Name</label><i class="mtrl-select"></i>
             </div>
             <div class="form-group half">
