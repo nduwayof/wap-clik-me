@@ -2,24 +2,29 @@ package edu.mum.cs.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
 public class Comment implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private String comment;
+    private LocalDateTime time;
     @OneToOne
     private Post post;
-
     @OneToOne
     private User user;
 
     public Comment() {
     }
 
-    public Comment(Post post, User user) {
+    public Comment(String comment) {
+        this.comment = comment;
+    }
+
+    public Comment(String comment, Post post, User user) {
+        this.comment = comment;
         this.post = post;
         this.user = user;
     }
@@ -30,6 +35,14 @@ public class Comment implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public Post getPost() {
@@ -48,12 +61,11 @@ public class Comment implements Serializable {
         this.user = user;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", post=" + post +
-                ", user=" + user +
-                '}';
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
     }
 }
