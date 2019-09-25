@@ -7,8 +7,10 @@
         </li>
         <li>
             <i class="ti-mouse-alt"></i>
-            <a href="profile" title="">Profile</a>
+            <a href="timeline?rf=${user.id}" title="">Timeline</a>
         </li>
+
+
         <li>
             <i class="ti-files"></i>
             <a href="followers" title="">Followers</a>
@@ -26,6 +28,11 @@
         <li>
             <i class="ti-bell"></i>
             <a href="notifications.html" title="">Notifications</a>
+        </li>
+
+        <li>
+            <i class="ti-mouse-alt"></i>
+            <a href="profile" title="">Profile</a>
         </li>
 
         <li>

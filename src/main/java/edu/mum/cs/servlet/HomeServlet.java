@@ -72,6 +72,12 @@ public class HomeServlet extends HttpServlet {
         user.setLastName("Bwengye");
         req.setAttribute("user",user);
         session.setAttribute("user",user);
+        List<User> users = new ArrayList<>();
+        user.setId(1);
+        user2.setId(2);
+        users.add(user);
+        users.add(user2);
+        req.getServletContext().setAttribute("users",users);
         // get the current posts for the user and user followers
         RequestDispatcher rd = req.getRequestDispatcher("views/user/home2.jsp");
         rd.forward(req,resp);
