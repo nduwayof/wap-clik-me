@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 610158
-  Date: 9/24/2019
-  Time: 12:51 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
@@ -12,43 +5,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title>MUM ClickMe ${user.firstName}  ${user.lastName} Home</title>
-
-    <%@include file="includes/head.jsp"%>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>MUM ClickMe ${user.firstName} ${user.lastName} Home</title>
+    <%@include file="includes/head.jsp" %>
 
 </head>
 <body>
-<!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
     <div class="postoverlay"></div>
     <div class="responsive-header">
         <div class="mh-head first Sticky">
 			<span class="mh-btns-left">
-				<a class="" href="index2.html#menu"><i class="fa fa-align-justify"></i></a>
+				<a class="" href="/home"><i class="fa fa-align-justify"></i></a>
 			</span>
             <span class="mh-text">
-				<a href="newsfeed.html" title=""><img src="images/logo2.png" alt=""></a>
+				<a href="javascript:void(0)" title=""><img src="../../resources/images/logo2.png" alt=""></a>
 			</span>
             <span class="mh-btns-right">
-				<a class="fa fa-sliders" href="index2.html#shoppingbag"></a>
+				<a class="fa fa-sliders" href="javascript:void(0)"></a>
 			</span>
         </div>
-        <div class="mh-head second">
-            <form class="mh-form">
-                <input placeholder="search" />
-                <a href="index2.html#/" class="fa fa-search"></a>
-            </form>
-        </div>
         <%-- include nav --%>
-        <%@include file="includes/nav_bar.jsp"%>
+        <%@include file="includes/nav_bar.jsp" %>
     </div><!-- responsive header -->
 
     <%-- include top  --%>
-    <%@include file="includes/top_bar.jsp"%>
+    <%@include file="includes/top_bar.jsp" %>
 
     <section>
         <div class="gap2 gray-bg">
@@ -59,15 +44,14 @@
                             <div class="col-lg-3">
                                 <aside class="sidebar static left">
                                     <%-- include shortcuts widget--%>
-                                    <%@include file="includes/side_shortcuts.jsp"%>
+                                    <%@include file="includes/side_shortcuts.jsp" %>
 
                                     <%-- include recent activity widget --%>
-                                    <%@include file="includes/aside_recent_activity.jsp"%>
+                                    <%@include file="includes/aside_recent_activity.jsp" %>
 
-
-                                        <!-- who's following -->
-                                        <%-- include whos following widget--%>
-                                        <%@include file="includes/aside_whos_following.jsp"%>
+                                    <!-- who's following -->
+                                    <%-- include whos following widget--%>
+                                    <%@include file="includes/aside_whos_following.jsp" %>
 
                                 </aside>
                             </div><!-- sidebar -->
@@ -75,7 +59,7 @@
                                 <div class="central-meta new-pst">
                                     <div class="new-postbox">
                                         <figure>
-                                            <img src="images/resources/admin2.jpg" alt="">
+                                            <img src="../../resources/images/resources/admin2.jpg" alt="">
                                         </figure>
                                         <div class="newpst-input">
                                             <%-- include post form  --%>
@@ -85,18 +69,18 @@
                                 </div><!-- add post new box -->
                                 <div class="loadMore">
                                     <%-- include the post fold --%>
-                                    <%@include file="includes/posts_list.jsp"%>
+                                    <%@include file="includes/posts_list.jsp" %>
                                 </div>
                             </div><!-- centerl meta -->
                             <div class="col-lg-3">
                                 <aside class="sidebar static right">
                                     <%-- include page stats widget --%>
-                                    <%@include file="includes/aside_page_stats.jsp"%>
+                                    <%@include file="includes/aside_page_stats.jsp" %>
                                     <%-- include page stats widget --%>
-                                    <%@include file="includes/side_ads.jsp"%>
+                                    <%@include file="includes/side_ads.jsp" %>
 
                                     <%-- include friends widget --%>
-                                    <%@include file="includes/aside_friends.jsp"%>
+                                    <%@include file="includes/aside_friends.jsp" %>
                                 </aside>
                             </div><!-- sidebar -->
                         </div>
@@ -127,22 +111,22 @@
         </div>
         <div class="setting-row">
             <span>Notifications</span>
-            <input type="checkbox" id="switch22" />
+            <input type="checkbox" id="switch22"/>
             <label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>Notification sound</span>
-            <input type="checkbox" id="switch33" />
+            <input type="checkbox" id="switch33"/>
             <label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>My profile</span>
-            <input type="checkbox" id="switch44" />
+            <input type="checkbox" id="switch44"/>
             <label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>Show profile</span>
-            <input type="checkbox" id="switch55" />
+            <input type="checkbox" id="switch55"/>
             <label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
         </div>
     </form>
@@ -150,32 +134,32 @@
     <form method="post">
         <div class="setting-row">
             <span>Sub users</span>
-            <input type="checkbox" id="switch66" />
+            <input type="checkbox" id="switch66"/>
             <label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>personal account</span>
-            <input type="checkbox" id="switch77" />
+            <input type="checkbox" id="switch77"/>
             <label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>Business account</span>
-            <input type="checkbox" id="switch88" />
+            <input type="checkbox" id="switch88"/>
             <label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>Show me online</span>
-            <input type="checkbox" id="switch99" />
+            <input type="checkbox" id="switch99"/>
             <label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>Delete history</span>
-            <input type="checkbox" id="switch101" />
+            <input type="checkbox" id="switch101"/>
             <label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
         </div>
         <div class="setting-row">
             <span>Expose author name</span>
-            <input type="checkbox" id="switch111" />
+            <input type="checkbox" id="switch111"/>
             <label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
         </div>
     </form>

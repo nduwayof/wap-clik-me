@@ -27,7 +27,7 @@
 
         <li>
             <i class="ti-bell"></i>
-            <a href="notifications.html" title="">Notifications</a>
+            <a href="javascript:void(0)" title="">Notifications</a>
         </li>
 
         <li>
@@ -37,7 +37,7 @@
 
         <li>
             <i class="ti-power-off"></i>
-            <a href="logout" title="">Logout</a>
+            <a href="/logout" title="">Logout</a>
         </li>
     </ul>
 </div><!-- Shortcuts -->
