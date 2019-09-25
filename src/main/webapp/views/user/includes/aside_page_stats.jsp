@@ -1,3 +1,4 @@
+<%--
 <div class="widget">
     <h4 class="widget-title">Your page</h4>
     <div class="your-page">
@@ -73,4 +74,4 @@
             </div>
         </div>
     </div>
-</div><!-- page like widget -->
+</div><!-- page like widget -->--%>

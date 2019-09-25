@@ -1,3 +1,4 @@
+<%--
 <div class="widget friend-list stick-widget">
     <h4 class="widget-title">Friends</h4>
     <div id="searchDir"></div>
@@ -160,4 +161,4 @@
             </form>
         </div>
     </div>
-</div><!-- friends list sidebar -->
+</div><!-- friends list sidebar -->--%>
