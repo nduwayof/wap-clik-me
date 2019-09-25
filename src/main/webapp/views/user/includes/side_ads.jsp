@@ -1,16 +1,16 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 610158
-  Date: 9/24/2019
-  Time: 11:55 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="widget">
+    <div class="banner medium-opacity bluesh">
+        <div class="bg-image" style="background-image: url(images/resources/baner-widgetbg.jpg)"></div>
+        <div class="baner-top">
+            <span><img alt="" src="images/book-icon.png"></span>
+            <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="banermeta">
+            <p>
+                create your own favourit page.
+            </p>
+            <span>like them all</span>
+            <a data-ripple="" title="" href="index.html#">start now!</a>
+        </div>
+    </div>
+</div>

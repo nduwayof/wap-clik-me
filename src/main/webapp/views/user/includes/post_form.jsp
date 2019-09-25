@@ -31,5 +31,9 @@
                 <button type="submit">Post</button>
             </li>
         </ul>
+        <div id="savingPost" style="display: none">
+            <hr>
+            Saving post..... Please wait!!
+        </div>
     </div>
 </form>

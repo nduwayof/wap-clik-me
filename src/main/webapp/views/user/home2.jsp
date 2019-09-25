@@ -1,13 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: 610158
-  Date: 9/23/2019
-  Time: 1:39 PM
+  Date: 9/24/2019
+  Time: 12:51 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,14 +16,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Click Me ${user.firstName}  ${user.lastName} Home</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+    <title>MUM ClickMe ${user.firstName}  ${user.lastName} Home</title>
+    <link rel="icon" href="resources/images/fav.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="resources/css/main.min.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/color.css">
     <link rel="stylesheet" href="resources/css/responsive.css">
-
 
 </head>
 <body>
@@ -32,19 +32,19 @@
     <div class="responsive-header">
         <div class="mh-head first Sticky">
 			<span class="mh-btns-left">
-				<a class="" href="index.html#menu"><i class="fa fa-align-justify"></i></a>
+				<a class="" href="index2.html#menu"><i class="fa fa-align-justify"></i></a>
 			</span>
             <span class="mh-text">
 				<a href="newsfeed.html" title=""><img src="images/logo2.png" alt=""></a>
 			</span>
             <span class="mh-btns-right">
-				<a class="fa fa-sliders" href="index.html#shoppingbag"></a>
+				<a class="fa fa-sliders" href="index2.html#shoppingbag"></a>
 			</span>
         </div>
         <div class="mh-head second">
             <form class="mh-form">
                 <input placeholder="search" />
-                <a href="index.html#/" class="fa fa-search"></a>
+                <a href="index2.html#/" class="fa fa-search"></a>
             </form>
         </div>
         <nav id="menu" class="res-menu">
@@ -223,73 +223,16 @@
         </div>
 
         <div class="top-area">
-            <ul class="main-menu">
-                <li>
-                    <a href="index.html#" title="">Home</a>
-                    <ul>
-                        <li><a href="index.html" title="">Home Social</a></li>
-                        <li><a href="index2.html" title="">Home Social 2</a></li>
-                        <li><a href="index-company.html" title="">Home Company</a></li>
-                        <li><a href="landing.html" title="">Login page</a></li>
-                        <li><a href="logout.html" title="">Logout Page</a></li>
-                        <li><a href="newsfeed.html" title="">news feed</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="index.html#" title="">timeline</a>
-                    <ul>
-                        <li><a href="time-line.html" title="">timeline</a></li>
-                        <li><a href="timeline-friends.html" title="">timeline friends</a></li>
-                        <li><a href="timeline-groups.html" title="">timeline groups</a></li>
-                        <li><a href="timeline-pages.html" title="">timeline pages</a></li>
-                        <li><a href="timeline-photos.html" title="">timeline photos</a></li>
-                        <li><a href="timeline-videos.html" title="">timeline videos</a></li>
-                        <li><a href="fav-page.html" title="">favourit page</a></li>
-                        <li><a href="groups.html" title="">groups page</a></li>
-                        <li><a href="page-likers.html" title="">Likes page</a></li>
-                        <li><a href="people-nearby.html" title="">people nearby</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="index.html#" title="">account settings</a>
-                    <ul>
-                        <li><a href="create-fav-page.html" title="">create fav page</a></li>
-                        <li><a href="edit-account-setting.html" title="">edit account setting</a></li>
-                        <li><a href="edit-interest.html" title="">edit-interest</a></li>
-                        <li><a href="edit-password.html" title="">edit-password</a></li>
-                        <li><a href="edit-profile-basic.html" title="">edit profile basics</a></li>
-                        <li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
-                        <li><a href="messages.html" title="">message box</a></li>
-                        <li><a href="inbox.html" title="">Inbox</a></li>
-                        <li><a href="notifications.html" title="">notifications page</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="index.html#" title="">more pages</a>
-                    <ul>
-                        <li><a href="404.html" title="">404 error page</a></li>
-                        <li><a href="about.html" title="">about</a></li>
-                        <li><a href="contact.html" title="">contact</a></li>
-                        <li><a href="faq.html" title="">faq's page</a></li>
-                        <li><a href="insights.html" title="">insights</a></li>
-                        <li><a href="knowledge-base.html" title="">knowledge base</a></li>
-                        <li><a href="widgets.html" title="">Widgts</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="top-search">
+                <form method="post" class="">
+                    <input type="text" placeholder="Search Friend">
+                    <button data-ripple><i class="ti-search"></i></button>
+                </form>
+            </div>
             <ul class="setting-area">
-                <li>
-                    <a href="index.html" title="Home" data-ripple=""><i class="ti-search"></i></a>
-                    <div class="searched">
-                        <form method="post" class="form-search">
-                            <input type="text" placeholder="Search Friend">
-                            <button data-ripple><i class="ti-search"></i></button>
-                        </form>
-                    </div>
-                </li>
                 <li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
                 <li>
-                    <a href="index.html#" title="Notification" data-ripple="">
+                    <a href="index2.html#" title="Notification" data-ripple="">
                         <i class="ti-bell"></i><span>20</span>
                     </a>
                     <div class="dropdowns">
@@ -355,7 +298,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
+                    <a href="index2.html#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
                     <div class="dropdowns">
                         <span>5 New Messages</span>
                         <ul class="drops-menu">
@@ -418,12 +361,12 @@
                         <a href="messages.html" title="" class="more-mesg">view more</a>
                     </div>
                 </li>
-                <li><a href="index.html#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
+                <li><a href="index2.html#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
                     <div class="dropdowns languages">
-                        <a href="index.html#" title=""><i class="ti-check"></i>English</a>
-                        <a href="index.html#" title="">Arabic</a>
-                        <a href="index.html#" title="">Dutch</a>
-                        <a href="index.html#" title="">French</a>
+                        <a href="index2.html#" title=""><i class="ti-check"></i>English</a>
+                        <a href="index2.html#" title="">Arabic</a>
+                        <a href="index2.html#" title="">Dutch</a>
+                        <a href="index2.html#" title="">French</a>
                     </div>
                 </li>
             </ul>
@@ -431,19 +374,20 @@
                 <img src="images/resources/admin.jpg" alt="">
                 <span class="status f-online"></span>
                 <div class="user-setting">
-                    <a href="index.html#" title=""><span class="status f-online"></span>online</a>
-                    <a href="index.html#" title=""><span class="status f-away"></span>away</a>
-                    <a href="index.html#" title=""><span class="status f-off"></span>offline</a>
-                    <a href="index.html#" title=""><i class="ti-user"></i> view profile</a>
-                    <a href="index.html#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
-                    <a href="index.html#" title=""><i class="ti-target"></i>activity log</a>
-                    <a href="index.html#" title=""><i class="ti-settings"></i>account setting</a>
-                    <a href="index.html#" title=""><i class="ti-power-off"></i>log out</a>
+                    <a href="index2.html#" title=""><span class="status f-online"></span>online</a>
+                    <a href="index2.html#" title=""><span class="status f-away"></span>away</a>
+                    <a href="index2.html#" title=""><span class="status f-off"></span>offline</a>
+                    <a href="index2.html#" title=""><i class="ti-user"></i> view profile</a>
+                    <a href="index2.html#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
+                    <a href="index2.html#" title=""><i class="ti-target"></i>activity log</a>
+                    <a href="index2.html#" title=""><i class="ti-settings"></i>account setting</a>
+                    <a href="index2.html#" title=""><i class="ti-power-off"></i>log out</a>
                 </div>
             </div>
             <span class="ti-menu main-menu" data-ripple=""></span>
         </div>
     </div><!-- topbar -->
+
 
     <div class="fixed-sidebar right">
         <div class="chat-friendz">
@@ -604,19 +548,23 @@
     </div><!-- left sidebar menu -->
 
     <section>
-        <div class="gap gray-bg">
+        <div class="gap2 gray-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row merged20" id="page-contents">
                             <div class="col-lg-3">
-                                <aside class="sidebar static">
-                                   <%-- include shortcuts widget--%>
-                                   <%@include file="includes/side_shortcuts.jsp"%>
+                                <aside class="sidebar static left">
+                                    <%-- include shortcuts widget--%>
+                                    <%@include file="includes/side_shortcuts.jsp"%>
 
-                                       <%-- include whos following widget--%>
-                                       <%@include file="includes/aside_whos_following.jsp"%>
+                                    <%-- include recent activity widget --%>
+                                    <%@include file="includes/aside_recent_activity.jsp"%>
 
+
+                                        <!-- who's following -->
+                                        <%-- include whos following widget--%>
+                                        <%@include file="includes/aside_whos_following.jsp"%>
 
                                 </aside>
                             </div><!-- sidebar -->
@@ -629,29 +577,23 @@
                                         <div class="newpst-input">
                                             <%-- include post form  --%>
                                             <%@ include file="includes/post_form.jsp" %>
-
-
                                         </div>
                                     </div>
                                 </div><!-- add post new box -->
                                 <div class="loadMore">
                                     <%-- include the post fold --%>
                                     <%@include file="includes/posts_list.jsp"%>
-
-
-
-
                                 </div>
                             </div><!-- centerl meta -->
                             <div class="col-lg-3">
-                                <aside class="sidebar static">
+                                <aside class="sidebar static right">
                                     <%-- include page stats widget --%>
-                                        <%@include file="includes/aside_page_stats.jsp"%>
-                                        <%-- include page stats widget --%>
-                                        <%@include file="includes/side_ads.jsp"%>
+                                    <%@include file="includes/aside_page_stats.jsp"%>
+                                    <%-- include page stats widget --%>
+                                    <%@include file="includes/side_ads.jsp"%>
 
-                                        <%-- include friends widget --%>
-                                        <%@include file="includes/aside_friends.jsp"%>
+                                    <%-- include friends widget --%>
+                                    <%@include file="includes/aside_friends.jsp"%>
                                 </aside>
                             </div><!-- sidebar -->
                         </div>
@@ -661,17 +603,11 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <%-- include footer row --%>
-            <%@include file="includes/footer_details_row.jsp"%>
-        </div>
-    </footer><!-- footer -->
     <div class="bottombar">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span class="copyright">© MUM ClickMe 2019. All rights reserved.</span>
+                    <span class="copyright">© Winku 2018. All rights reserved.</span>
                     <i><img src="images/credit-cards.png" alt=""></i>
                 </div>
             </div>
@@ -742,12 +678,10 @@
     </form>
 </div><!-- side panel -->
 
-<script data-cfasync="false" src="https://wpkixx.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="resources/js/main.min.js"></script>
 <script src="resources/js/script.js"></script>
 <script src="resources/js/map-init.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
-
 <script src="resources/js/views/user/post.js" type="text/javascript"></script>
 
 </body>

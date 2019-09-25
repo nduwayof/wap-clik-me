@@ -17,6 +17,7 @@ public class User implements Serializable {
     private String lastName;
     private String email;
     private String password;
+    private String image;
 
     @Column(name = "access", nullable = false)
     @Enumerated(EnumType.STRING)
@@ -26,7 +27,14 @@ public class User implements Serializable {
     @Enumerated(EnumType.STRING)
     private EGender gender;
 
-    List<Post> posts = new ArrayList<>();
+    @Transient
+    private List<Post> posts = new ArrayList<>();
+
+    @Transient
+    List<User> followers = new ArrayList<>();
+
+    @Transient
+    List<User>following = new ArrayList<>();
 
 
 
@@ -43,6 +51,16 @@ public class User implements Serializable {
         this.gender = gender;
     }
 
+    public User(String firstName, String lastName, String email, String password, String image, Acesslevel access, EGender gender, List<Post> posts) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.image = image;
+        this.access = access;
+        this.gender = gender;
+        this.posts = posts;
+    }
 
     public long getId() {
         return id;
@@ -111,4 +129,27 @@ public class User implements Serializable {
         this.posts = posts;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(List<User> followers) {
+        this.followers = followers;
+    }
+
+    public List<User> getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(List<User> following) {
+        this.following = following;
+    }
 }

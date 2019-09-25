@@ -1,3 +1,5 @@
+<div id="postsList">
+
 <c:forEach var="post" items="${posts}" >
 
     <div class="central-meta item">
@@ -7,75 +9,27 @@
                     <img src="images/resources/friend-avatar10.jpg" alt="">
                 </figure>
                 <div class="friend-name">
-                    <ins><a href="time-line.html" title="">${post.user.firstName} ${post.user.lastName}</a></ins>
+                    <ins><a href="#" title="" class="postUserName">${post.user.firstName} ${post.user.lastName}</a></ins>
                     <span>published: ${post.time}</span>
                 </div>
                 <div class="post-meta">
-                    <img src="uploads/${post.photo}" alt="post image">
+                    <img src="uploads/${post.photo}" alt="post image" class="postImage">
                     <div class="we-video-info">
                         <ul>
-                            <li>
-															<span class="views" data-toggle="tooltip" title="views">
-																<i class="fa fa-eye"></i>
-																<ins>1.2k</ins>
-															</span>
-                            </li>
+
                             <li>
 															<span class="comment" data-toggle="tooltip" title="Comments">
 																<i class="fa fa-comments-o"></i>
-																<ins>52</ins>
+																<ins class="commentsSize">${post.comments.size()}</ins>
 															</span>
                             </li>
-                            <li>
-															<span class="like" data-toggle="tooltip" title="like">
-																<i class="ti-heart"></i>
-																<ins>2.2k</ins>
-															</span>
-                            </li>
-                            <li>
-															<span class="dislike" data-toggle="tooltip" title="dislike">
-																<i class="ti-heart-broken"></i>
-																<ins>200</ins>
-															</span>
-                            </li>
-                            <li class="social-media">
-                                <div class="menu">
-                                    <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-html5"></i></a></div>
-                                    </div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-facebook"></i></a></div>
-                                    </div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-google-plus"></i></a></div>
-                                    </div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-twitter"></i></a></div>
-                                    </div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-css3"></i></a></div>
-                                    </div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-dribbble"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="rotater">
-                                        <div class="btn btn-icon"><a href="index.html#" title=""><i class="fa fa-pinterest"></i></a>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="description">
 
-                        <p>
+                        <p class="postDetails">
                                 ${post.details}
                         </p>
                     </div>
@@ -83,95 +37,127 @@
             </div>
             <div class="coment-area">
                 <ul class="we-comet">
+                    <c:forEach var="comment" items="${post.comments}" >
                     <li>
                         <div class="comet-avatar">
-                            <img src="images/resources/comet-1.jpg" alt="">
+                            <c:if test="${comment.user.image}" >
+                            <img src="uploads/user/${comment.user.image}" alt="userImage" class="commentUserImage">
+                            </c:if>
                         </div>
                         <div class="we-comment">
                             <div class="coment-head">
-                                <h5><a href="time-line.html" title="">Jason borne</a></h5>
-                                <span>1 year ago</span>
+                                <h5><a href="#" title="" class="commentUserName">${comment.user.firstName} ${comment.user.lastName}</a></h5>
+                                <span>${comment.time}</span>
                                 <a class="we-reply" href="index.html#" title="Reply"><i class="fa fa-reply"></i></a>
                             </div>
-                            <p>we are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post</p>
+                            <p class="commentComment">${comment.comment}</p>
                         </div>
-                        <ul>
-                            <li>
-                                <div class="comet-avatar">
-                                    <img src="images/resources/comet-2.jpg" alt="">
-                                </div>
-                                <div class="we-comment">
-                                    <div class="coment-head">
-                                        <h5><a href="time-line.html" title="">alexendra dadrio</a></h5>
-                                        <span>1 month ago</span>
-                                        <a class="we-reply" href="index.html#" title="Reply"><i class="fa fa-reply"></i></a>
-                                    </div>
-                                    <p>yes, really very awesome car i see the features of this car in the official website of <a href="index.html#" title="">#Mercedes-Benz</a> and really impressed :-)</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="comet-avatar">
-                                    <img src="images/resources/comet-3.jpg" alt="">
-                                </div>
-                                <div class="we-comment">
-                                    <div class="coment-head">
-                                        <h5><a href="time-line.html" title="">Olivia</a></h5>
-                                        <span>16 days ago</span>
-                                        <a class="we-reply" href="index.html#" title="Reply"><i class="fa fa-reply"></i></a>
-                                    </div>
-                                    <p>i like lexus cars, lexus cars are most beautiful with the awesome features, but this car is really outstanding than lexus</p>
-                                </div>
-                            </li>
-                        </ul>
+
                     </li>
-                    <li>
-                        <div class="comet-avatar">
-                            <img src="images/resources/comet-4.jpg" alt="">
-                        </div>
-                        <div class="we-comment">
-                            <div class="coment-head">
-                                <h5><a href="time-line.html" title="">Donald Trump</a></h5>
-                                <span>1 week ago</span>
-                                <a class="we-reply" href="index.html#" title="Reply"><i class="fa fa-reply"></i></a>
-                            </div>
-                            <p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
-                                <i class="em em-smiley"></i>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="index.html#" title="" class="showmore underline">more comments</a>
-                    </li>
+
+                    </c:forEach>
                     <li class="post-comment">
                         <div class="comet-avatar">
-                            <img src="images/resources/comet-1.jpg" alt="">
+                            <img src="${user.image}" alt="" class="postCommentUserImage">
                         </div>
                         <div class="post-comt-box">
-                            <form method="post">
-                                <textarea placeholder="Post your comment"></textarea>
+                            <form method="post" action="addPostComment" class="postCommentForm" id="${post.id}_postCommentForm">
+                                <input placeholder="Post your comment" name="postComment" class="postComment" id="${post.id}_postComment">
                                 <div class="add-smiles">
                                     <span class="em em-expressionless" title="add icon"></span>
                                 </div>
-                                <div class="smiles-bunch">
-                                    <i class="em em---1"></i>
-                                    <i class="em em-smiley"></i>
-                                    <i class="em em-anguished"></i>
-                                    <i class="em em-laughing"></i>
-                                    <i class="em em-angry"></i>
-                                    <i class="em em-astonished"></i>
-                                    <i class="em em-blush"></i>
-                                    <i class="em em-disappointed"></i>
-                                    <i class="em em-worried"></i>
-                                    <i class="em em-kissing_heart"></i>
-                                    <i class="em em-rage"></i>
-                                    <i class="em em-stuck_out_tongue"></i>
-                                </div>
-                                <button type="submit"></button>
+                                <input type="hidden" value="${post.id}" name="commentPostId" id="${post.id}_commentPostId" class="commentPostId" >
+                                <button type="submit">add</button>
                             </form>
+                            <div style="display: none" class="savingPostComment" id="${post.id}_savingPostComment">
+                                Posting.....
+                            </div>
                         </div>
                     </li>
+
                 </ul>
             </div>
         </div>
     </div>
 </c:forEach>
+
+<!-- for javascript purposes !! donot modify-->
+<div >
+    <div class="central-meta item" id="postsListDivTemplate" style="display: none">
+        <div class="user-post">
+            <div class="friend-info">
+                <figure>
+                    <img src="images/resources/friend-avatar10.jpg" alt="">
+                </figure>
+                <div class="friend-name">
+                    <ins><a href="#" title="" class="postUserName">${post.user.firstName} ${post.user.lastName}</a></ins>
+                    <span class="postPublishTime">published: ${post.time}</span>
+                </div>
+                <div class="post-meta">
+                    <img src="uploads/${post.photo}" alt="post image" class="postImage">
+                    <div class="we-video-info">
+                        <ul>
+
+                            <li>
+															<span class="comment" data-toggle="tooltip" title="Comments">
+																<i class="fa fa-comments-o"></i>
+																<ins class="postCommentsSize">${post.comments.size()}</ins>
+															</span>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="description">
+
+                        <p class="postDetails">
+                            ${post.details}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="coment-area">
+                <ul class="we-comet">
+
+                        <li id="postCommentsLiTemplate" >
+                            <div class="comet-avatar">
+                                <c:if test="${comment.user.image}" >
+                                    <img src="uploads/user/${comment.user.image}" alt="userImage" class="commentUserImage">
+                                </c:if>
+                            </div>
+                            <div class="we-comment">
+                                <div class="coment-head">
+                                    <h5><a href="#" title="" class="commentUserName">${comment.user.firstName} ${comment.user.lastName}</a></h5>
+                                    <span class="commentTime">${comment.time}</span>
+                                    <a class="we-reply" href="index.html#" title="Reply"><i class="fa fa-reply"></i></a>
+                                </div>
+                                <p class="commentComment">${comment.comment}</p>
+                            </div>
+
+                        </li>
+
+                    <li class="post-comment">
+                        <div class="comet-avatar">
+                            <img src="${user.image}" alt="" class="postCommentUserImage">
+                        </div>
+                        <div class="post-comt-box">
+                            <form method="post" action="addPostComment" class="postCommentForm" id="${post.id}_postCommentForm">
+                                <input placeholder="Post your comment" name="postComment" class="postComment" id="${post.id}_postComment">
+                                <div class="add-smiles">
+                                    <span class="em em-expressionless" title="add icon"></span>
+                                </div>
+                                <input type="hidden" value="" name="commentPostId" id="${post.id}_commentPostId" class="commentPostId" >
+                                <button type="submit" value="add">add</button>
+                            </form>
+                            <div style="display: none" class="savingPostComment" id="${post.id}_savingPostComment">
+                                Posting.....
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
