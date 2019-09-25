@@ -82,7 +82,10 @@
                             <a href="/admin-dashboard"><i class="icon-accelerator"></i> Dashboard</a>
                         </li>
                         <li class="has-submenu">
-                            <a href="/list-users"><i class="icon-profile"></i> Users</a>
+                            <a href="/users"><i class="icon-profile"></i> Users</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="/advertisements"><i class="icon-paper-pen"></i> Advertisements</a>
                         </li>
                     </ul>
                 </div>

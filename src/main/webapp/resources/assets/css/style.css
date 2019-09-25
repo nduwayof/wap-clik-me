@@ -3649,4 +3649,8 @@ table.focus-on tbody tr.focused td {
 .pricing-box .pricing-features {
   padding-left: 20px;
 }
+
+.card-body .btn-group{
+  margin-bottom: 10px;
+}
 /*# sourceMappingURL=style.css.map */
