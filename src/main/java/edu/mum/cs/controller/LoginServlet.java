@@ -24,7 +24,9 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, IOException {
-        doPost(req, resp);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/home.jsp");
+
+        dispatcher.forward(req,resp);
 
     }
         @Override
@@ -56,9 +58,8 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session = req.getSession();
                 session.setAttribute("username", username);
                 session.setAttribute("password", password);
-                RequestDispatcher dispatcher = req.getRequestDispatcher("/list-users.jsp");//to the home page
-               // session.setAttribute("user",u);
-                dispatcher.forward(req,resp);
+                resp.sendRedirect("home.jsp");
+
             } else {
                 String error = " Wrong user name or Password";
                 req.setAttribute("errorMessage", "userName or Password is Wrong");
