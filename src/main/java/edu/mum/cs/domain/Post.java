@@ -1,5 +1,6 @@
 package edu.mum.cs.domain;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -8,26 +9,28 @@ import java.util.List;
 
 @Entity
 public class Post implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private long id;
     private String details;
     private String photo;
     private LocalDateTime time;
     @OneToOne
     private User user;
     private Boolean enabled;
+
     @Transient
     private List<Comment> comments = new ArrayList<>();
 
     public Post() {
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -80,13 +83,15 @@ public class Post implements Serializable {
     }
 
     @Override
-    public java.lang.String toString() {
+    public String toString() {
         return "Post{" +
                 "id=" + id +
                 ", details='" + details + '\'' +
-                ", photo=" + photo +
+                ", photo='" + photo + '\'' +
+                ", time=" + time +
                 ", user=" + user +
                 ", enabled=" + enabled +
+                ", comments=" + comments +
                 '}';
     }
 }

@@ -40,7 +40,7 @@
 </head>
 <body>
 <div class="right">
-    <form action="/userprofile" class="postion">
+    <form action="userprofile" class="postion">
         <div>
             <label>First Name</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"

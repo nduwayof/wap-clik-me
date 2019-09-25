@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+
 /*--- big screen ----*/
 
 @media screen and (max-width: 1920px) and (min-width: 1601px) {
@@ -1813,10 +1810,7 @@
     }
     .apply-bttons > a{font-size: 13px; padding: 8px 14px;}
 
-<<<<<<< HEAD
-=======
-=======
-/*--- big screen ----*/
+
 
 @media screen and (max-width: 1920px) and (min-width: 1601px) {
     .edit-phto {
@@ -3558,75 +3552,97 @@
     .user-avatar {
         width: 40%;
     }
+
     #people-list figure {
         width: 20%;
     }
+
     .sidebar .widget ul.recent-photos li {
         width: 32.1%;
         margin-bottom: 4px;
     }
+
     .friend-logo > span {
         font-size: 170px;
     }
+
     .frnds .nav-tabs .nav-item {
         font-size: 14px;
         margin-right: 15px;
     }
+
     .timeline-info > ul li.admin-name {
         left: 128px;
         top: -95px;
     }
+
     .add-btn {
         right: 6px;
         top: 57px;
     }
+
     .feature-photo > .edit-phto {
         top: 10px;
     }
+
     .timeline-info .admin-name > span {
         color: #333;
     }
+
     .timeline-info .admin-name > h5 {
         color: #424242;
         font-size: 20px;
     }
+
     .comet-avatar {
         max-width: 10%;
         width: 10%;
     }
+
     .liked-pages > li {
         max-width: 48%;
         min-width: 48%;
         width: 48%;
     }
+
     .nearby-contct > li {
         padding: 10px;
     }
+
     .pepl-info {
         width: 81%;
     }
+
     .pepl-info > h4 {
         width: auto;
     }
+
     .we-video-info > ul li.social-media {
         position: absolute;
         right: 20px;
         top: -41px;
     }
+
     .pepl-info {
         width: 80%;
     }
+
     .delivery-guide {
         margin-bottom: 15px;
     }
+
     .add_to_wishlist {
         margin-bottom: 14px;
     }
+
     nav.breadcrumb {
         width: 100%;
     }
-    .apply-bttons > a{font-size: 13px; padding: 8px 14px;}
 
->>>>>>> 46a46945b6caef4fd5a54a7f204254a0f658bd0c
->>>>>>> 63d9c3d505c6ea64d7c18ee8e6688ddef62bf5c4
+    .apply-bttons > a {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+}
 }

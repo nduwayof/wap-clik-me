@@ -1,13 +1,17 @@
+<%@ page import="edu.mum.cs.controller.user.UserController" %>
+<%@ page import="java.util.List" %>
+<%@ page import="edu.mum.cs.domain.User" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <title>MumBook || Users</title>
-    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
-    <meta content="Fabrice Nduwayo" name="author" />
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description"/>
+    <meta content="Fabrice Nduwayo" name="author"/>
     <link rel="shortcut icon" href="resources/assets/images/favicon.ico">
 
     <link href="resources/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +24,7 @@
 <body>
 <%
     Object object = session.getAttribute("admin");
-    if(object == null){
+    if (object == null) {
         response.sendRedirect("/admin-login");
     }
 %>
@@ -44,11 +48,14 @@
                         </li>
                         <li class="dropdown notification-list list-inline-item">
                             <div class="dropdown notification-list nav-pro-img">
-                                <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="false" aria-expanded="false">
-                                    <img src="resources/assets/images/users/user-4.jpg" alt="user" class="rounded-circle">
+                                <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown"
+                                   href="javascript:void(0)" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="resources/assets/images/users/user-4.jpg" alt="user"
+                                         class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                                    <a class="dropdown-item text-danger" href="/admin-logout"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                                    <a class="dropdown-item text-danger" href="/admin-logout"><i
+                                            class="mdi mdi-power text-danger"></i> Logout</a>
                                 </div>
                             </div>
                         </li>
@@ -91,7 +98,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <h4 class="page-title">List of Users</h4>
+                    <h4 class="page-title">Manage users</h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-right">
@@ -102,28 +109,31 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row hidden" id="form_container">
             <div class="col-12">
                 <div class="card m-b-30">
                     <div class="card-body">
-                        <form action="/users" method="post" id="save_user">
+                        <form action="users" method="post" id="save_user">
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="firstName">First Name <span class="text-danger">*</span></label>
-                                        <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Enter first name" required/>
+                                        <input type="text" name="firstName" id="firstName" class="form-control"
+                                               placeholder="Enter first name" required/>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="lastName">Last Name <span class="text-danger">*</span></label>
-                                        <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Enter last name" required/>
+                                        <input type="text" name="lastName" id="lastName" class="form-control"
+                                               placeholder="Enter last name" required/>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="email">Email <span class="text-danger">*</span></label>
-                                        <input type="text" name="email" id="email" class="form-control" placeholder="Enter last name" required/>
+                                        <input type="text" name="email" id="email" class="form-control"
+                                               placeholder="Enter last name" required/>
                                     </div>
                                 </div>
                             </div>
@@ -142,22 +152,29 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="password">Password <span class="text-danger">*</span></label>
-                                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" required/>
+                                        <input type="password" name="password" id="password" class="form-control"
+                                               placeholder="Enter password" required/>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="confirmPassword">Confirm password <span class="text-danger">*</span></label>
-                                        <input type="password" name="email" id="confirmPassword" class="form-control" placeholder="Enter confirm password" required/>
+                                        <input type="password" name="confirmPassword" id="confirmPassword" class="form-control"
+                                               placeholder="Enter confirm password" required/>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary">
+                                <div class="col pull-right">
+                                    <button type="submit" class="btn btn-primary ">
                                         <i class="fa fa-save"></i>
                                         SUBMIT
                                     </button>
+                                    <button type="submit" class="btn btn-secondary" id="hide_form">
+                                        <i class="fa fa-stop"></i>
+                                        CANCEL
+                                    </button>
+
                                 </div>
                             </div>
                         </form>
@@ -166,45 +183,58 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="view_container">
             <div class="col-12">
                 <div class="card m-b-30">
                     <div class="card-body">
-                        <div class="btn-group ">
-                            <button class="btn btn-primary" id="user_form">
+                        <h5 class="card-header">
+                            List of users
+                            <button class="btn btn-primary" id="show_form">
                                 <i class="fa fa-plus-circle"></i>
                                 New User
                             </button>
-                        </div>
+                        </h5>
+                        <hr class="hr-line">
                         <div class="table-responsive">
-                            <table class="table table-striped mb-0">
+                            <table class="table table-striped mb-0" id="records_table">
                                 <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Username</th>
+                                    <th>Gender</th>
+                                    <th>Email</th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <%
+                                    List<User> users = (List<User>) request.getAttribute("users");
+                                    for (User user : users) {
+                                %>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <th><%=user.getId()%></th>
+                                    <td><%=user.getFirstName()%></td>
+                                    <td><%=user.getLastName()%></td>
+                                    <td><%=user.getGender()%></td>
+                                    <td><%=user.getEmail()%></td>
+                                    <td id="user_data_<%=user.getId()%>">
+                                        <%if(user.isActive()){%>
+                                            <a href="javascript:void(0)" class="btn btn-success btn-sm"
+                                               title="Active" onclick="changeStatus(<%=user.getId()%>)">
+                                                <i class="fa fa-check"></i>
+                                            </a>
+                                        <%}else{%>
+                                            <a href="javascript:void(0)" class="btn btn-danger btn-sm"
+                                               title="Inactive" onclick="changeStatus(<%=user.getId()%>)">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        <%}%>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
+                                <%
+                                    }
+                                %>
                                 </tbody>
                             </table>
                         </div>

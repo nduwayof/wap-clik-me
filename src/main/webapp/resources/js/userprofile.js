@@ -10,7 +10,7 @@ $(function () {
     $("#submit").click(function (e) {
         $("#loader").show();
         $.ajax({
-            url : 'userprofile',
+            url : 'users',
             type : 'GET',
             data : {
                 fname : $('#fname').val(),

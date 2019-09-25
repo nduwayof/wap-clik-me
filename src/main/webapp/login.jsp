@@ -44,18 +44,18 @@
                         <p>
                             Don’t use MumBook Yet? <a href="landing.html#" title="">Take the tour</a> or <a href="landing.html#" title="">Join now</a>
                         </p>
-                        <form method="post">
+                        <form method="post" action="login">
                             <div class="form-group">
-                                <input type="text" id="input" required="required"/>
+                                <input type="text" id="input" name="username" required="required"/>
                                 <label class="control-label" for="input">Username</label><i class="mtrl-select"></i>
                             </div>
                             <div class="form-group">
-                                <input type="password" required="required"/>
+                                <input type="password" name="password" required="required"/>
                                 <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" checked="checked"/><i class="check-box"></i>Always Remember Me.
+                                    <input type="checkbox" checked="checked" name="remember_me"/><i class="check-box"></i>Always Remember Me.
                                 </label>
                             </div>
                             <a href="landing.html#" title="" class="forgot-pwd">Forgot Password?</a>
