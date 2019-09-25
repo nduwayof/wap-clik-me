@@ -113,7 +113,7 @@
             <div class="col-12">
                 <div class="card m-b-30">
                     <div class="card-body">
-                        <form action="/users" method="post" id="save_user">
+                        <form action="users" method="post" id="save_user">
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
