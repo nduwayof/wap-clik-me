@@ -1,10 +1,7 @@
 package edu.mum.cs.controller.advertisment;
 
-import edu.mum.cs.dao.user.AbstractDao;
 import edu.mum.cs.domain.Advertisement;
 import edu.mum.cs.domain.Company;
-import edu.mum.cs.domain.Post;
-import edu.mum.cs.domain.User;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -14,7 +11,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,7 +24,7 @@ public class AdvertisementServlet extends HttpServlet {
 
 
     private  String imageUpload_DIRECTORY;
-    private AbstractDao abstractDao = new AbstractDao();
+
     private List<Advertisement> advertisements = new ArrayList<>();
 
     @Override

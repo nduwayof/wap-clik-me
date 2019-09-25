@@ -1,6 +1,7 @@
 package edu.mum.cs.servlet;
 
-import edu.mum.cs.dao.user.AbstractDao;
+import edu.mum.cs.dao.IAbstractDao;
+import edu.mum.cs.dao.PostDao;
 import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
 import org.apache.commons.fileupload.FileItem;
@@ -24,7 +25,7 @@ import java.util.Map;
 @WebServlet(name = "addpost",urlPatterns = {"/addPost"})
 public class PostServlet extends HttpServlet {
     private  String UPLOAD_DIRECTORY;
-    private AbstractDao abstractDao = new AbstractDao();
+    private IAbstractDao abstractDao = new PostDao();
     private List<Post> posts = new ArrayList<>();
 
     @Override
@@ -83,9 +84,6 @@ public class PostServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("Post add successful");
         //abstractDao.save(post);
-
-
-
 
     }
 
