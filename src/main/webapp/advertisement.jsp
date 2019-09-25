@@ -111,40 +111,33 @@
                                 <i class="fa fa-plus-circle"></i>
                                 New Advertise
                             </button>
+
                         </div>
+                        <form action="/advertisement.jsp" method="post">
+                        <div class="search">
+                            <input type="submit" value="search" id="searchfname">
+                            <input type="text" placeholder="enter name" name="firstname">
+                            <input type="text" placeholder="" name="myname"></div>
                         <div class="table-responsive">
                             <table class="table table-striped mb-0">
+
                                 <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
+
                             </table>
                         </div>
+                        </form>
                     </div>
+
                 </div>
             </div>
         </div>

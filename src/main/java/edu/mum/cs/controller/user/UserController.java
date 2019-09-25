@@ -30,6 +30,7 @@ public class UserController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         try{
+
             request.getRequestDispatcher("list-users.jsp")
                     .forward(request, response);
             response.sendRedirect("/users");
@@ -49,6 +50,7 @@ public class UserController extends HttpServlet {
             String password = request.getParameter("password");
             String access = "user";
             User user = new User(firstName, lastName, email, password, access, gender);
+
             dao.save(user);
             users.add(user);
             Gson gson = new Gson();

@@ -15,7 +15,7 @@
     <title>MumBook || Login</title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
     <meta content="Fabrice Nduwayo" name="author" />
-    <link rel="shortcut icon" href="resources/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="resources/assets/images/mum.png">
 
     <link href="resources/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="resources/assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
 
         <div class="card-body">
             <div class="text-center m-t-0 m-b-15">
-                <a href="/admin-login" class="logo logo-admin"><img src="resources/assets/images/logo-dark.png" alt="" height="24"></a>
+                <a href="/admin-login" class="logo logo-admin"><img src="resources/assets/images/mum.png" alt="" height="24"></a>
             </div>
             <h5 class="font-18 text-center">Sign in to continue to MumBook.</h5>
 

@@ -15,7 +15,7 @@
     <title>MumBook || Dashboard</title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
     <meta content="Fabrice Nduwayo" name="author" />
-    <link rel="shortcut icon" href="resources/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="resources/assets/images/mum.png">
     <link rel="stylesheet" href="resources/assets/css/morris.css">
     <link href="resources/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="resources/assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
