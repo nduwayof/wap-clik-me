@@ -1,17 +1,18 @@
 package edu.mum.cs.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "PHOTOS")
 public class Photo implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "ID")
+    private long id;
+
+    @Column(name = "LINK", nullable = false)
     private String link;
 
     public Photo(String link) {
@@ -21,11 +22,11 @@ public class Photo implements Serializable {
     public Photo() {
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

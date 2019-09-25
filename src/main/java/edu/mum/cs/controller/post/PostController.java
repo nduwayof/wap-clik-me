@@ -1,6 +1,6 @@
 package edu.mum.cs.controller.post;
 
-import edu.mum.cs.dao.IAbstractDao;
+import edu.mum.cs.dao.GenericJpaDao;
 import edu.mum.cs.dao.post.PostDao;
 import edu.mum.cs.domain.Post;
 
@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class PostController extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(PostController.class.getName());
-    private IAbstractDao dao;
+    private GenericJpaDao<Long, Post> dao;
     public PostController(){
         dao = new PostDao();
     }

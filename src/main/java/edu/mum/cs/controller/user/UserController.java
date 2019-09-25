@@ -1,7 +1,7 @@
 package edu.mum.cs.controller.user;
 
 import com.google.gson.Gson;
-import edu.mum.cs.dao.IAbstractDao;
+import edu.mum.cs.dao.user.IUserDao;
 import edu.mum.cs.dao.user.UserDao;
 import edu.mum.cs.domain.User;
 
@@ -10,9 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,7 +19,7 @@ import java.util.logging.Logger;
 public class UserController extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(UserController.class.getName());
-    private IAbstractDao dao;
+    private IUserDao dao;
     private Gson gson = new Gson();
 
     @Override
@@ -47,7 +45,7 @@ public class UserController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         try{
             User user = userObj(request);
-            dao.save(user);
+            dao.create(user);
             PrintWriter writer = response.getWriter();
             String userJsonString = this.gson.toJson(user);
             response.setContentType("application/json");

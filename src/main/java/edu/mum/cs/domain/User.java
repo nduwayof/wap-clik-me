@@ -27,6 +27,7 @@ public class User implements Serializable {
     @Column(name = "EMAIL", nullable = false)
     private String email;
 
+    @Column(name = "IMAGE")
     private String image;
 
 
@@ -40,12 +41,6 @@ public class User implements Serializable {
     @Transient
     private List<Post> posts = new ArrayList<>();
 
-    @Transient
-    List<User> followers = new ArrayList<>();
-
-    @Transient
-    List<User>following = new ArrayList<>();
-
     @Column(name = "GENDER", nullable = false)
     private String gender;
 
@@ -53,11 +48,17 @@ public class User implements Serializable {
     @Column(name = "ACTIVE")
     private  boolean active = Boolean.TRUE;
 
+    @Column(name = "LOGGED_IN")
     private boolean loggedIn;
 
     private String timelinePhoto;
 
 
+    @Transient
+    List<User> followers = new ArrayList<>();
+
+    @Transient
+    List<User>following = new ArrayList<>();
 
     /**
      * Instantiates a new User.
@@ -279,11 +280,29 @@ public class User implements Serializable {
         this.loggedIn = loggedIn;
     }
 
+
     public String getTimelinePhoto() {
         return timelinePhoto;
     }
 
     public void setTimelinePhoto(String timelinePhoto) {
         this.timelinePhoto = timelinePhoto;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", image='" + image + '\'' +
+                ", password='" + password + '\'' +
+                ", access='" + access + '\'' +
+                ", gender='" + gender + '\'' +
+                ", active=" + active +
+                ", loggedIn=" + loggedIn +
+                ", timelinePhoto='" + timelinePhoto + '\'' +
+                '}';
     }
 }
