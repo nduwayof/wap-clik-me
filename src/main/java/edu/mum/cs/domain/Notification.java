@@ -2,12 +2,17 @@ package edu.mum.cs.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
 public class Notification implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    private String details;
+
+    private LocalDateTime notTime = LocalDateTime.now();
 
     @OneToOne
     private Post post;
@@ -45,6 +50,14 @@ public class Notification implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     @Override

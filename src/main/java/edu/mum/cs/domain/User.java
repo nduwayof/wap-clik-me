@@ -55,6 +55,8 @@ public class User implements Serializable {
 
     private boolean loggedIn;
 
+    private String timelinePhoto;
+
 
 
     /**
@@ -275,5 +277,13 @@ public class User implements Serializable {
 
     public void setLoggedIn(boolean loggedIn) {
         this.loggedIn = loggedIn;
+    }
+
+    public String getTimelinePhoto() {
+        return timelinePhoto;
+    }
+
+    public void setTimelinePhoto(String timelinePhoto) {
+        this.timelinePhoto = timelinePhoto;
     }
 }

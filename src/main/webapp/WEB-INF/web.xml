@@ -15,6 +15,14 @@
     <param-name>imageOfAds</param-name>
     <param-value>C:\Users\bsur9\Desktop\wap-clik-me\src\main\webapp\adsImage</param-value>
   </context-param>
+  <context-param>
+    <param-name>imageUploadsCover</param-name>
+    <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads\user\cover</param-value>
+  </context-param>
+  <context-param>
+    <param-name>imageUploadsDisplay</param-name>
+    <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads\user\display</param-value>
+  </context-param>
 
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
