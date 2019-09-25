@@ -4,15 +4,20 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "NOTIFICATIONS")
 public class Notification implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "ID")
+    private long id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "POST_ID")
     private Post post;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "USER_ID")
     private User user;
 
     public Notification() {
@@ -23,11 +28,11 @@ public class Notification implements Serializable {
         this.user = user;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

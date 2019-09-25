@@ -44,7 +44,7 @@
                         <p>
                             Don’t use MumBook Yet? <a href="landing.html#" title="">Take the tour</a> or <a href="landing.html#" title="">Join now</a>
                         </p>
-                        <form method="post" action="login">
+                        <form method="post" action="/login">
                             <div class="form-group">
                                 <input type="text" id="input" name="username" required="required"/>
                                 <label class="control-label" for="input">Username</label><i class="mtrl-select"></i>
@@ -60,7 +60,7 @@
                             </div>
                             <a href="landing.html#" title="" class="forgot-pwd">Forgot Password?</a>
                             <div class="submit-btns">
-                                <button class="mtr-btn signin" type="button"><span>Login</span></button>
+                                <button class="mtr-btn signin" type="submit"><span>Login</span></button>
                                 <button class="mtr-btn signup" type="button"><span>Register</span></button>
                             </div>
                         </form>

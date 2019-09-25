@@ -1,7 +1,6 @@
 package edu.mum.cs.controller.advertisment;
 
 import edu.mum.cs.domain.Advertisement;
-import edu.mum.cs.domain.Company;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -39,7 +38,6 @@ public class AdvertisementServlet extends HttpServlet {
         Map<String, String> params = new HashMap<>();
         String adsDetails= "";
        Advertisement ads= new Advertisement();
-       Company comp=new Company();
 
         if(ServletFileUpload.isMultipartContent(req)){
             try {
@@ -54,36 +52,23 @@ public class AdvertisementServlet extends HttpServlet {
                     }
                     else{
                         String name = new File(item.getName()).getName();
-                        // set the photo name
                         imageName = name;
                         item.write( new File(imageUpload_DIRECTORY + File.separator + name));
                     }
                 }
-
-                //File uploaded successfully
                 req.setAttribute("message", "File Uploaded Successfully");
             } catch (Exception ex) {
                 req.setAttribute("message", "File Upload Failed due to " + ex);
             }
-
         }else{
             req.setAttribute("message",
                     "Sorry this Servlet only handles file upload request");
         }
-
-
-        //add things to db
-     //   HttpSession session = req.getSession();
-     //admin   User user = (User)session.getAttribute("user");
         ads.setTitle(params.get("txtTitle"));
-        ads.setCompanyAds(comp);
+        ads.setCompany("Maharishi University of Management");
         ads.setImage(imageName);
         advertisements.add(ads);
-        //post.setUser(new User());
-        // save post to database
         PrintWriter out = resp.getWriter();
         out.println("ads are added successful");
-        //abstractDao.save(post);
-
     }
 }

@@ -1,29 +1,32 @@
 package edu.mum.cs.domain;
 
-import lombok.Data;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "ADVERTISEMENTS")
 public class Advertisement implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private long id;
+
+    @Column(name = "TITLE", nullable = false)
     private String title;
-    private Company companyAds;
+
+    @Column(name = "COMPANY", nullable = false)
+    private String company;
+
+    @Column(name = "IMAGE", nullable = false)
     private String image;
 
     public Advertisement() {
     }
 
-    public Advertisement(String title, Company companyAds, String image) {
+    public Advertisement(String title, String company, String image) {
         this.title = title;
-        this.companyAds = companyAds;
+        this.company = company;
         this.image = image;
     }
 
@@ -43,12 +46,12 @@ public class Advertisement implements Serializable {
         this.title = title;
     }
 
-    public Company getCompanyAds() {
-        return companyAds;
+    public String getCompany() {
+        return company;
     }
 
-    public void setCompanyAds(Company companyAds) {
-        this.companyAds = companyAds;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
     public String getImage() {
@@ -64,7 +67,7 @@ public class Advertisement implements Serializable {
         return "Advertisement{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", companyAds=" + companyAds +
+                ", company='" + company + '\'' +
                 ", image='" + image + '\'' +
                 '}';
     }
