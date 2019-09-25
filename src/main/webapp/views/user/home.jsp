@@ -15,8 +15,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+
     <title>Click Me ${user.firstName}  ${user.lastName} Home</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+   <!-- <link rel="shortcut icon" href="resources/images/m" type="image/png" sizes="16x16">-->
+    <link  type="image/png" rel="icon" href="resources/images/mum.png">
 
     <link rel="stylesheet" href="resources/css/main.min.css">
     <link rel="stylesheet" href="resources/css/style.css">
@@ -219,7 +221,7 @@
 
     <div class="topbar stick">
         <div class="logo">
-            <a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+            <a title="" href="newsfeed.html"><img src="images/mum.png" alt=""></a>
         </div>
 
         <div class="top-area">
