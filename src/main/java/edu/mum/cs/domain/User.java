@@ -53,6 +53,8 @@ public class User implements Serializable {
     @Column(name = "ACTIVE")
     private  boolean active = Boolean.TRUE;
 
+    private boolean loggedIn;
+
 
 
     /**
@@ -267,4 +269,11 @@ public class User implements Serializable {
         this.following = following;
     }
 
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
 }
