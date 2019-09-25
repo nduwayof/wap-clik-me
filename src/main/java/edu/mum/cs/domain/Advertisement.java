@@ -8,9 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-@Entity(name="advertisement")
-@Data
+@Entity
 public class Advertisement implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -18,13 +18,13 @@ public class Advertisement implements Serializable {
     private Company companyAds;
     private String image;
 
+    public Advertisement() {
+    }
+
     public Advertisement(String title, Company companyAds, String image) {
         this.title = title;
         this.companyAds = companyAds;
         this.image = image;
-    }
-
-    public Advertisement() {
     }
 
     public long getId() {
@@ -59,5 +59,14 @@ public class Advertisement implements Serializable {
         this.image = image;
     }
 
+    @Override
+    public String toString() {
+        return "Advertisement{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", companyAds=" + companyAds +
+                ", image='" + image + '\'' +
+                '}';
+    }
 }
 

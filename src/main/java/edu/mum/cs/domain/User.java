@@ -27,20 +27,35 @@ public class User implements Serializable {
     @Column(name = "EMAIL", nullable = false)
     private String email;
 
+    private String image;
+
+
     @Column(name = "PASSWORD", nullable = false)
     private String password;
 
     @Column(name = "ACCESS", nullable = false)
     private String access;
 
+
+    @Transient
+    private List<Post> posts = new ArrayList<>();
+
+    @Transient
+    List<User> followers = new ArrayList<>();
+
+    @Transient
+    List<User>following = new ArrayList<>();
+
     @Column(name = "GENDER", nullable = false)
     private String gender;
+
 
     @Column(name = "ACTIVE")
     private  boolean active = Boolean.TRUE;
 
-    @Transient
-    private List<Post> posts = new ArrayList<>();
+    private boolean loggedIn;
+
+
 
     /**
      * Instantiates a new User.
@@ -48,17 +63,8 @@ public class User implements Serializable {
     public User() {
     }
 
-    /**
-     * Instantiates a new User.
-     *
-     * @param firstName the first name
-     * @param lastName  the last name
-     * @param email     the email
-     * @param password  the password
-     * @param access    the access
-     * @param gender    the gender
-     * @param active    the active
-     */
+
+
     public User(String firstName, String lastName, String email, String password, String access, String gender) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -68,19 +74,19 @@ public class User implements Serializable {
         this.gender = gender;
     }
 
-    public User(String firstName, String lastName, String email, String gender) {
+
+    public User(String firstName, String lastName, String email, String password, String image, String access, String gender, List<Post> posts) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.password = password;
+        this.image = image;
+        this.access = access;
         this.gender = gender;
+        this.posts = posts;
     }
 
 
-    /**
-     * Gets id.
-     *
-     * @return the id
-     */
     public long getId() {
         return id;
     }
@@ -236,5 +242,38 @@ public class User implements Serializable {
      */
     public void setPosts(List<Post> posts) {
         this.posts = posts;
+    }
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(List<User> followers) {
+        this.followers = followers;
+    }
+
+    public List<User> getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(List<User> following) {
+        this.following = following;
+    }
+
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
     }
 }

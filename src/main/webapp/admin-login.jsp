@@ -36,7 +36,7 @@
             </div>
             <h5 class="font-18 text-center">Sign in to continue to MumBook.</h5>
 
-            <form class="form-horizontal m-t-30" action="/admin-login" method="post">
+            <form class="form-horizontal m-t-30" action="admin-login" method="post">
                 <div class="form-group">
                     <div class="col-12">
                         <label for="username">Username</label>
