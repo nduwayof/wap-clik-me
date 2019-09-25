@@ -3653,4 +3653,27 @@ table.focus-on tbody tr.focused td {
 .card-body .btn-group{
   margin-bottom: 10px;
 }
-/*# sourceMappingURL=style.css.map */
+.hidden{
+  display: none;
+}
+.card-body{
+  padding: 15px;
+}
+.btn#show_form {
+  float: right;
+}
+.pull-right{
+  text-align: right;
+}
+.card-header {
+  padding: 0 !important;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+.hr-line{
+  border-bottom: 4px solid #000000;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
