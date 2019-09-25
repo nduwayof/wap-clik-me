@@ -1,7 +1,11 @@
 package edu.mum.cs.servlet;
 
+
+import com.google.gson.Gson;
+
 import edu.mum.cs.dao.IAbstractDao;
 import edu.mum.cs.dao.PostDao;
+
 import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
 import org.apache.commons.fileupload.FileItem;
@@ -25,8 +29,10 @@ import java.util.Map;
 @WebServlet(name = "addpost",urlPatterns = {"/addPost"})
 public class PostServlet extends HttpServlet {
     private  String UPLOAD_DIRECTORY;
+
     private IAbstractDao abstractDao = new PostDao();
     private List<Post> posts = new ArrayList<>();
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -78,11 +84,21 @@ public class PostServlet extends HttpServlet {
         User user = (User)session.getAttribute("user");
         post.setDetails(params.get("postDetails"));
         post.setPhoto(photoName);
+        post.setUser(user);
+
+        List<Post> posts = (List<Post>)session.getAttribute("posts");
+        post.setId(posts.size()+1);
         posts.add(post);
+        session.setAttribute("posts",posts);
         //post.setUser(new User());
         // save post to database
         PrintWriter out = resp.getWriter();
-        out.println("Post add successful");
+
+        // convert to json
+        Gson gn = new Gson();
+        String postsJson = gn.toJson(posts);
+        resp.setContentType("application/json");
+        out.write(postsJson);
         //abstractDao.save(post);
 
     }
