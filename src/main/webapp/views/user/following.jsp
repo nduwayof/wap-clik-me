@@ -233,7 +233,7 @@
                             <div class="col-lg-6">
                                 <div class="loadMore">
                                     <%-- include the post fold --%>
-                                    <%@include file="includes/notifications_list.jsp"%>
+                                    <%@include file="includes/following_list.jsp"%>
                                 </div>
                             </div><!-- centerl meta -->
                             <div class="col-lg-3">

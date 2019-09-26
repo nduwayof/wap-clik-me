@@ -18,30 +18,30 @@ public class User implements Serializable {
     @Column(name = "ID")
     private long id;
 
-    @Column(name = "FIRST_NAME", nullable = false)
+    @Column(name = "FIRST_NAME", nullable = true)
     private String firstName;
 
-    @Column(name = "LAST_NAME", nullable = false)
+    @Column(name = "LAST_NAME", nullable = true)
     private String lastName;
 
-    @Column(name = "EMAIL", nullable = false)
+    @Column(name = "EMAIL", nullable = true)
     private String email;
 
     @Column(name = "IMAGE")
     private String image;
 
 
-    @Column(name = "PASSWORD", nullable = false)
+    @Column(name = "PASSWORD", nullable = true)
     private String password;
 
-    @Column(name = "ACCESS", nullable = false)
+    @Column(name = "ACCESS", nullable = true)
     private String access;
 
 
     @Transient
     private List<Post> posts = new ArrayList<>();
 
-    @Column(name = "GENDER", nullable = false)
+    @Column(name = "GENDER", nullable = true)
     private String gender;
 
 

@@ -13,17 +13,17 @@ public class Comment implements Serializable {
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "COMMENT", nullable = false)
+    @Column(name = "COMMENT", nullable = true)
     private String comment;
 
-    @Column(name = "TIME", nullable = false)
+    @Column(name = "TIME", nullable = true)
     private LocalDateTime time;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "POST_ID")
     private Post post;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "USER_ID")
     private User user;
 
@@ -78,5 +78,14 @@ public class Comment implements Serializable {
 
     public void setTime(LocalDateTime time) {
         this.time = time;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", comment='" + comment + '\'' +
+                ", time=" + time +
+                '}';
     }
 }

@@ -14,8 +14,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/followers")
-public class FollowersServlet extends HttpServlet {
+@WebServlet("/following")
+public class FollowingServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
@@ -24,8 +25,8 @@ public class FollowersServlet extends HttpServlet {
         //data access
         IUserDao userDao = new UserDao();
         UserService userService = new UserService();
-        List<User> followers = userDao.getUserFollowing(user);
+        List<User> followers = userDao.getUserFollowers(user);
         req.setAttribute("users",followers);
-        req.getRequestDispatcher("views/user/followers.jsp").forward(req,resp);
+        req.getRequestDispatcher("views/user/following.jsp").forward(req,resp);
     }
 }

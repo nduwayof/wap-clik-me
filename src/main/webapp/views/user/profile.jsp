@@ -182,6 +182,7 @@
 <script src="resources/js/script.js"></script>
 <script src="resources/js/views/user/editcoverphoto.js" type="text/javascript"></script>
 <script src="resources/js/views/user/editdisplayphoto.js" type="text/javascript"></script>
+<script src="resources/js/views/user/notifications.js" type="text/javascript"></script>
 
 </body>
 </html>

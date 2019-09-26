@@ -4,10 +4,12 @@ package edu.mum.cs.servlet;
 import com.google.gson.Gson;
 
 import edu.mum.cs.dao.GenericJpaDao;
+import edu.mum.cs.dao.post.IPostDao;
 import edu.mum.cs.dao.post.PostDao;
 
 import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
+import edu.mum.cs.service.PostService;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -21,6 +23,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -85,18 +88,22 @@ public class PostServlet extends HttpServlet {
         post.setDetails(params.get("postDetails"));
         post.setPhoto(photoName);
         post.setUser(user);
+        post.setTime(LocalDateTime.now());
+        post.setEnabled(true);
 
-        List<Post> posts = (List<Post>)session.getAttribute("posts");
-        post.setId(posts.size()+1);
-        posts.add(post);
-        session.setAttribute("posts",posts);
+        // add post to database
+        IPostDao postDao = new PostDao();
+        PostService postService = new PostService();
+        Post dbPost = postDao.create(post);
+        // send notifications
+        postService.addPostNotification(post);
         //post.setUser(new User());
         // save post to database
         PrintWriter out = resp.getWriter();
 
         // convert to json
         Gson gn = new Gson();
-        String postsJson = gn.toJson(posts);
+        String postsJson = gn.toJson(postService.getPostsUserHome(user));
         resp.setContentType("application/json");
         out.write(postsJson);
         //abstractDao.save(post);

@@ -1,6 +1,9 @@
 package edu.mum.cs.servlet;
 
+import edu.mum.cs.dao.user.IUserDao;
+import edu.mum.cs.dao.user.UserDao;
 import edu.mum.cs.domain.User;
+import edu.mum.cs.service.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,22 +20,12 @@ import java.util.List;
 public class PeopleNearByServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = new User();
-        user.setFirstName("Wagobera");
-        user.setLastName("Edgar");
-        user.setImage("brian_bwengye_profile_pic.jpg");
-        user.setId(1);
-
-        User user2 = new User();
-        user2.setFirstName("Fabrice");
-        user2.setLastName("Nduwayo");
-        user2.setImage("Capture.PNG");
-        user2.setId(2);
-        List<User> users = new ArrayList<>();
-        users.add(user);
-        users.add(user2);
         HttpSession session = req.getSession();
-        session.setAttribute("users",users);
+        User user = (User) session.getAttribute("user");
+        IUserDao userDao = new UserDao();
+        UserService userService = new UserService();
+        List<User> users = userService.getUserNearBy(user);
+        req.setAttribute("users",users);
         RequestDispatcher rd = req.getRequestDispatcher("views/user/people_nearby.jsp");
         rd.forward(req,resp);
     }
