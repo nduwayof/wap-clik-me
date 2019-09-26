@@ -54,6 +54,9 @@ public class User implements Serializable {
     @Column(name = "TWITTER_ACCOUNT")
     private String twitterAccount;
 
+    @Column(name = "TIMELINE_PHONE")
+    private String timelinePhoto;
+
 
     @Transient
     List<User> followers = new ArrayList<>();
@@ -287,6 +290,14 @@ public class User implements Serializable {
 
     public void setTwitterAccount(String twitterAccount) {
         this.twitterAccount = twitterAccount;
+    }
+
+    public String getTimelinePhoto() {
+        return timelinePhoto;
+    }
+
+    public void setTimelinePhoto(String timelinePhoto) {
+        this.timelinePhoto = timelinePhoto;
     }
 
     @Override
