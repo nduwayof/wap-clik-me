@@ -1,5 +1,8 @@
 package edu.mum.cs.servlet;
 
+import edu.mum.cs.dao.advertisement.AdvertisementDao;
+import edu.mum.cs.dao.advertisement.IAdvertisementDao;
+import edu.mum.cs.domain.Advertisement;
 import edu.mum.cs.domain.Comment;
 import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
@@ -20,13 +23,19 @@ import java.util.List;
 @WebServlet(name = "home",urlPatterns = "/home")
 public class HomeServlet extends HttpServlet {
 
+    private IAdvertisementDao advertisementDao;
     List<Post> posts = new ArrayList<>();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // display the user home with current posts
+    public void init() throws ServletException {
+        super.init();
+        this.advertisementDao = new AdvertisementDao();
+    }
 
-        // add testing date
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<Advertisement> advertisements = advertisementDao.findAll();
+        req.setAttribute("advertisements", advertisements);
         HttpSession session = req.getSession();
         Post post1 = new Post();
 
