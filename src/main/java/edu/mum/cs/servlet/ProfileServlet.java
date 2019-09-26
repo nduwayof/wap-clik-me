@@ -1,11 +1,11 @@
 package edu.mum.cs.servlet;
 
 import com.google.gson.Gson;
-import edu.mum.cs.controller.user.UserController;
-import edu.mum.cs.dao.IAbstractDao;
+import edu.mum.cs.dao.user.IUserDao;
 import edu.mum.cs.dao.user.UserDao;
 import edu.mum.cs.domain.User;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,9 +23,14 @@ import java.util.logging.Logger;
 public class ProfileServlet extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(ProfileServlet.class.getName());
-    private IAbstractDao dao;
+    private IUserDao dao;
     private Gson gson = new Gson();
 
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        this.dao = new UserDao();
+    }
 
     @Override
     public void init() throws ServletException {
@@ -33,19 +38,20 @@ public class ProfileServlet extends HttpServlet {
         dao = new UserDao();
     }
 
-       private List<User>profilelist=new ArrayList<>();
+    private List<User> profilelist = new ArrayList<>();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-      //  req.getRequestDispatcher("views/user/profile.jsp").forward(req,resp);
+        //  req.getRequestDispatcher("views/user/profile.jsp").forward(req,resp);
 
-        try{
-            List<User>users=new ArrayList<>();
-           // List<User> users = dao.findAll();
+        try {
+            List<User> users = new ArrayList<>();
+            // List<User> users = dao.findAll();
             request.setAttribute("users", users);
             request.getRequestDispatcher("views/user/profile.jsp")
                     .forward(request, resp);
             resp.sendRedirect("/profile");
-        }catch (Exception ex){
+        } catch (Exception ex) {
             LOGGER.log(Level.SEVERE, ex.getMessage());
         }
 
@@ -53,12 +59,12 @@ public class ProfileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try{
+        try {
             HttpSession session = req.getSession();
             User user = userprofile(req);
             //User dnUsrer = (UserDao)dao.save(user);
-           session.setAttribute("user",user);
-               dao.save(user);
+            session.setAttribute("user", user);
+            dao.update(user);
             resp.sendRedirect("profile");
             PrintWriter writer = resp.getWriter();
             String userJsonString = this.gson.toJson(user);
@@ -67,26 +73,27 @@ public class ProfileServlet extends HttpServlet {
             writer.print(userJsonString);
             writer.flush();
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             LOGGER.log(Level.SEVERE, ex.getMessage());
         }
 
 
     }
-    private User userprofile(HttpServletRequest req){
-        String fname=req.getParameter("firstname");
-        String lname=req.getParameter("lastname");
-        String email=req.getParameter("email");
+
+    private User userprofile(HttpServletRequest req) {
+        String fname = req.getParameter("firstname");
+        String lname = req.getParameter("lastname");
+        String email = req.getParameter("email");
 
 
-        String phone=req.getParameter("myphone");
-        String day=req.getParameter("day");
-        String month=req.getParameter("month");
-        String year=req.getParameter("year");
-        String city=req.getParameter("cityyy");
-        String country=req.getParameter("country");
-        String gender=req.getParameter("radio");
-        return new User(fname, lname, email, phone, day, month,year,city,country,gender);
+        String phone = req.getParameter("myphone");
+        String day = req.getParameter("day");
+        String month = req.getParameter("month");
+        String year = req.getParameter("year");
+        String city = req.getParameter("cityyy");
+        String country = req.getParameter("country");
+        String gender = req.getParameter("radio");
+        return new User(fname, lname, email, phone, day, month, year, city, country, gender);
     }
 
 }

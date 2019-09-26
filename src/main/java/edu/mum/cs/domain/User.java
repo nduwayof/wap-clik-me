@@ -32,43 +32,33 @@ public class User implements Serializable {
     @Column(name = "IMAGE")
     private String image;
 
-    @Column(name="Phonenumber",nullable=true)
+    @Column(name = "PHONE_NUMBER", nullable = true)
+    private String phone;
 
-      private String phone;
-    @Column(name="dateofbirt",nullable = true)
-
-      private GregorianCalendar dab;
+    @Column(name = "DATE_OF_BIRTH")
+    private GregorianCalendar dab;
 
     @Column(name = "PASSWORD", nullable = true)
     private String password;
 
     @Column(name = "ACCESS", nullable = true)
     private String access;
-    @Column(name="City",nullable = true)
+
+    @Column(name = "CIRY", nullable = true)
     private String city;
 
-    @Column(name="Country",nullable = true)
+    @Column(name = "COUNTRY", nullable = true)
     private String country;
 
     @Transient
     private List<Post> posts = new ArrayList<>();
 
-<<<<<<< HEAD
-    @Transient
-    List<User> followers = new ArrayList<>();
-
-    @Transient
-    List<User>following = new ArrayList<>();
-
-    @Column(name = "GENDER", nullable = true)
-=======
     @Column(name = "GENDER", nullable = false)
->>>>>>> 4cce2da088c3d77be3144dcff0e8fa7e2e20080e
     private String gender;
 
 
     @Column(name = "ACTIVE")
-    private  boolean active = Boolean.TRUE;
+    private boolean active = Boolean.TRUE;
 
     @Column(name = "LOGGED_IN")
     private boolean loggedIn;
@@ -79,19 +69,17 @@ public class User implements Serializable {
     @Column(name = "TIMELINE_PHONE")
     private String timelinePhoto;
 
-
     @Transient
     List<User> followers = new ArrayList<>();
 
     @Transient
-    List<User>following = new ArrayList<>();
+    List<User> following = new ArrayList<>();
 
     /**
      * Instantiates a new User.
      */
     public User() {
     }
-
 
 
     public User(String firstName, String lastName, String email, String password, String access, String gender) {
@@ -120,7 +108,7 @@ public class User implements Serializable {
         return id;
     }
 
-    public User(String firstName, String lastName, String email, String phone, String year,String month,String day, String city, String country,String gender) {
+    public User(String firstName, String lastName, String email, String phone, String year, String month, String day, String city, String country, String gender) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -131,94 +119,40 @@ public class User implements Serializable {
         this.gender = gender;
     }
 
-    /**
-     * Sets id.
-     *
-     * @param id the id
-     */
     public void setId(long id) {
         this.id = id;
     }
 
-    /**
-     * Gets first name.
-     *
-     * @return the first name
-     */
     public String getFirstName() {
         return firstName;
     }
 
-    /**
-     * Sets first name.
-     *
-     * @param firstName the first name
-     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    /**
-     * Gets last name.
-     *
-     * @return the last name
-     */
     public String getLastName() {
         return lastName;
     }
 
-    /**
-     * Sets last name.
-     *
-     * @param lastName the last name
-     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    /**
-     * Gets email.
-     *
-     * @return the email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * Sets email.
-     *
-     * @param email the email
-     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * Gets password.
-     *
-     * @return the password
-     */
-    public String getPassword() {
-        return password;
+    public String getImage() {
+        return image;
     }
 
-    /**
-     * Sets password.
-     *
-     * @param password the password
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
-     * Gets access.
-     *
-     * @return the access
-     */
-    public String getAccess() {
-        return access;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getPhone() {
@@ -229,76 +163,92 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
-    /**
-     * Sets access.
-     *
-     * @param access the access
-     */
+    public GregorianCalendar getDab() {
+        return dab;
+    }
+
+    public void setDab(GregorianCalendar dab) {
+        this.dab = dab;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getAccess() {
+        return access;
+    }
+
     public void setAccess(String access) {
         this.access = access;
     }
 
-    /**
-     * Gets gender.
-     *
-     * @return the gender
-     */
-    public String getGender() {
-        return gender;
+    public String getCity() {
+        return city;
     }
 
-    /**
-     * Sets gender.
-     *
-     * @param gender the gender
-     */
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    /**
-     * Is active boolean.
-     *
-     * @return the boolean
-     */
-    public boolean isActive() {
-        return active;
+    public String getCountry() {
+        return country;
     }
 
-    /**
-     * Sets active.
-     *
-     * @param active the active
-     */
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
-    /**
-     * Gets posts.
-     *
-     * @return the posts
-     */
     public List<Post> getPosts() {
         return posts;
     }
 
-    /**
-     * Sets posts.
-     *
-     * @param posts the posts
-     */
     public void setPosts(List<Post> posts) {
         this.posts = posts;
     }
 
-
-    public String getImage() {
-        return image;
+    public String getGender() {
+        return gender;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
+
+    public String getTwitterAccount() {
+        return twitterAccount;
+    }
+
+    public void setTwitterAccount(String twitterAccount) {
+        this.twitterAccount = twitterAccount;
+    }
+
+    public String getTimelinePhoto() {
+        return timelinePhoto;
+    }
+
+    public void setTimelinePhoto(String timelinePhoto) {
+        this.timelinePhoto = timelinePhoto;
     }
 
     public List<User> getFollowers() {
@@ -317,56 +267,6 @@ public class User implements Serializable {
         this.following = following;
     }
 
-    public boolean isLoggedIn() {
-        return loggedIn;
-    }
-
-    public void setLoggedIn(boolean loggedIn) {
-        this.loggedIn = loggedIn;
-    }
-
-<<<<<<< HEAD
-    public GregorianCalendar getDab() {
-        return dab;
-    }
-
-    public void setDab(GregorianCalendar dab) {
-        this.dab = dab;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-=======
-    public String getTwitterAccount() {
-        return twitterAccount;
-    }
-
-    public void setTwitterAccount(String twitterAccount) {
-        this.twitterAccount = twitterAccount;
-    }
-
-    public String getTimelinePhoto() {
-        return timelinePhoto;
-    }
-
-    public void setTimelinePhoto(String timelinePhoto) {
-        this.timelinePhoto = timelinePhoto;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -375,15 +275,20 @@ public class User implements Serializable {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", image='" + image + '\'' +
+                ", phone='" + phone + '\'' +
+                ", dab=" + dab +
                 ", password='" + password + '\'' +
                 ", access='" + access + '\'' +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
                 ", posts=" + posts +
                 ", gender='" + gender + '\'' +
                 ", active=" + active +
                 ", loggedIn=" + loggedIn +
+                ", twitterAccount='" + twitterAccount + '\'' +
+                ", timelinePhoto='" + timelinePhoto + '\'' +
                 ", followers=" + followers +
                 ", following=" + following +
                 '}';
     }
->>>>>>> 4cce2da088c3d77be3144dcff0e8fa7e2e20080e
 }
