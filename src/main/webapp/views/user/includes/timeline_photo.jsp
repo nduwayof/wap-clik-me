@@ -51,10 +51,12 @@
                 <div class="timeline-info">
                     <ul>
                         <li class="admin-name">
+
                             <a href="home" title="Home" style="text-decoration: none">
                             <h5>${timelineUser.firstName} ${timelineUser.lastName}</h5>
                             <span>${timelineUser.email}</span>
                             </a>
+
                         </li>
                         <li>
                             <a class="active" href="#" title="" data-ripple="">time line</a>

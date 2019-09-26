@@ -76,7 +76,5 @@ public class EditCoverPhotoServlet extends HttpServlet {
         session.setAttribute("user",dbUser);
         PrintWriter out = resp.getWriter();
         out.println("upload successful");
-
-        //abstractDao.save(user);
     }
 }

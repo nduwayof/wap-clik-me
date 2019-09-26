@@ -14,7 +14,12 @@
             </li>
         </ul>
         <div class="user-img">
+            <c:if test="${empty user.image}">
             <img src="../../resources/images/resources/admin.jpg" alt="">
+            </c:if>
+            <c:if test="${not empty user.image}">
+                <img src="uploads/user/display/${user.image}" alt="" style="height: 45px">
+            </c:if>
             <span class="status f-online"></span>
             <div class="user-setting">
                 <a href="/profile" title=""><i class="ti-pencil-alt"></i>My profile</a>

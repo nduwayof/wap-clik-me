@@ -1,4 +1,4 @@
-<%--
+<%@ page import="javax.swing.*" %><%--
   Created by IntelliJ IDEA.
   User: 610158
   Date: 9/25/2019
@@ -22,7 +22,6 @@
 
 </head>
 <body>
-<!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
     <div class="postoverlay"></div>
     <div class="responsive-header">
@@ -182,6 +181,7 @@
 <script src="resources/js/script.js"></script>
 <script src="resources/js/views/user/editcoverphoto.js" type="text/javascript"></script>
 <script src="resources/js/views/user/editdisplayphoto.js" type="text/javascript"></script>
+
 <script src="resources/js/views/user/notifications.js" type="text/javascript"></script>
 
 </body>

@@ -21,6 +21,9 @@ public class Advertisement implements Serializable {
     @Column(name = "IMAGE", nullable = false)
     private String image;
 
+    @Column(name =  "BLOCKED")
+    private boolean blocked = Boolean.FALSE;
+
     public Advertisement() {
     }
 
@@ -60,6 +63,14 @@ public class Advertisement implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
     }
 
     @Override

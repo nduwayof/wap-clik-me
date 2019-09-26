@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="edu.mum.cs.domain.Advertisement" %>
 <div class="widget">
     <h4 class="widget-title">Shortcuts</h4>
     <ul class="naves">
@@ -46,4 +48,13 @@
             <a href="/logout" title="">Logout</a>
         </li>
     </ul>
-</div><!-- Shortcuts -->
+</div>
+
+<c:forEach var="image" items="${advertisements}" varStatus="counter">
+    <div class="widget">
+        <h4 class="widget-title">${image.company}</h4>
+        <img src="uploads/advertisements/${image.image}" alt="uploads/advertisements/${image.image}" height="50px"/>
+    </div>
+</c:forEach>
+
+

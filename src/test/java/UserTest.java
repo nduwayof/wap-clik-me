@@ -17,6 +17,7 @@ public class UserTest {
 
     public static void main(String[] args) {
         User user = new User();
+
         user.setFirstName("Brian");
         user.setLastName("Bwengye");
         user.setGender("Male");
@@ -38,6 +39,7 @@ public class UserTest {
         for(User userObject : users){
            User userObj =  userDao.findById(userObject.getId());
            System.out.println(userObj.toString());
+
         }
 
         List<Post> posts = postDao.getPostsUserHome(userDao.findById(1l));

@@ -1,5 +1,7 @@
 package edu.mum.cs.controller.advertisment;
 
+import edu.mum.cs.dao.advertisement.AdvertisementDao;
+import edu.mum.cs.dao.advertisement.IAdvertisementDao;
 import edu.mum.cs.domain.Advertisement;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -11,64 +13,71 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-@WebServlet(name ="addAds",  urlPatterns="/addAds")
+@WebServlet(urlPatterns = "/advertisements")
 public class AdvertisementServlet extends HttpServlet {
 
-
-    private  String imageUpload_DIRECTORY;
-
-    private List<Advertisement> advertisements = new ArrayList<>();
+    private static final Logger LOGGER = Logger.getLogger(AdvertisementServlet.class.getName());
+    private String UPLOAD_DIRECTORY;
+    private IAdvertisementDao advertisementDao;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+    public void init() throws ServletException {
+        super.init();
+        this.advertisementDao = new AdvertisementDao();
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        imageUpload_DIRECTORY = req.getServletContext().getInitParameter("imageOfAds");
-        String imageName = "";
-        Map<String, String> params = new HashMap<>();
-        String adsDetails= "";
-       Advertisement ads= new Advertisement();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            List<Advertisement> advertisements = advertisementDao.findAll();
+            request.setAttribute("advertisements", advertisements);
+            request.getRequestDispatcher("advertisements.jsp").forward(request, response);
+            response.sendRedirect("/advertisements");
+        } catch (Exception ex) {
+            LOGGER.log(Level.SEVERE, ex.getMessage());
+        }
+    }
 
-        if(ServletFileUpload.isMultipartContent(req)){
-            try {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            response.setContentType("application/json");
+            UPLOAD_DIRECTORY = request.getServletContext().getInitParameter("advertisements");
+            String imageName = "";
+            Map<String, String> params = new HashMap<>();
+            if (ServletFileUpload.isMultipartContent(request)) {
                 List<FileItem> multiparts = new ServletFileUpload(
-                        new DiskFileItemFactory()).parseRequest(req);
-
-                for(FileItem item : multiparts){
-                    if(item.isFormField()) {
+                        new DiskFileItemFactory()).parseRequest(request);
+                for (FileItem item : multiparts) {
+                    if (item.isFormField()) {
                         String name = item.getFieldName();
                         String value = item.getString();
-                        params.put(name,value);
-                    }
-                    else{
+                        params.put(name, value);
+                    } else {
                         String name = new File(item.getName()).getName();
                         imageName = name;
-                        item.write( new File(imageUpload_DIRECTORY + File.separator + name));
+                        item.write(new File(UPLOAD_DIRECTORY + File.separator + name));
                     }
                 }
-                req.setAttribute("message", "File Uploaded Successfully");
-            } catch (Exception ex) {
-                req.setAttribute("message", "File Upload Failed due to " + ex);
+                request.setAttribute("message", "File Uploaded Successfully");
+            } else {
+                request.setAttribute("message",
+                        "Sorry this Servlet only handles file upload request");
             }
-        }else{
-            req.setAttribute("message",
-                    "Sorry this Servlet only handles file upload request");
+            String title = params.get("title");
+            String company = params.get("company");
+            Advertisement advertisement = new Advertisement(title, company, imageName);
+            advertisementDao.create(advertisement);
+            response.sendRedirect("/advertisements");
+        } catch (Exception ex) {
+            LOGGER.log(Level.SEVERE, ex.getMessage());
         }
-        ads.setTitle(params.get("txtTitle"));
-        ads.setCompany("Maharishi University of Management");
-        ads.setImage(imageName);
-        advertisements.add(ads);
-        PrintWriter out = resp.getWriter();
-        out.println("ads are added successful");
     }
+
 }
