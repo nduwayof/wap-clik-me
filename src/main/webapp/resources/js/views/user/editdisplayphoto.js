@@ -23,10 +23,7 @@ $(function () {
         console.log(data);
         $('#fileContainer').mousemove();
         $('#editDisplayPhotoLabelSpan').text('Upload Successful');
-        window.setTimeout(function () {
-            location.reload();
-        },1000);
-
+        location.reload();
     }
 
     function editDisplayPhotoErrorFunction(err,status,exception) {

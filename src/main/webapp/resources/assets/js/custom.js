@@ -66,6 +66,29 @@ function changeStatus(param) {
     });
 }
 
+function blockAdvert(param) {
+    $.ajax({
+        url : '/block-advert',
+        method : 'GET',
+        data : {
+            'advert_id' : param
+        },
+        success : function (data) {
+            if(data.blocked){
+                $('#advert_data_'+param).html('<a href="javascript:void(0)" class="btn btn-danger btn-sm"\n' +
+                    ' title="Blocked" onclick="blockAdvert('+data.id+')">\n' +
+                    ' <i class="fa fa-times"></i>\n' +
+                    ' </a>')
+            }else{
+                $('#advert_data_'+param).html('<a href="javascript:void(0)" class="btn btn-success btn-sm"\n' +
+                    ' title="Not Blocked" onclick="blockAdvert('+data.id+')">\n' +
+                    ' <i class="fa fa-check"></i>\n' +
+                    ' </a>')
+            }
+        }
+    });
+}
+
 function show_form() {
     $('#view_container').addClass('hidden');
     $('#form_container').removeClass('hidden');

@@ -86,7 +86,7 @@ public class ProfileServlet extends HttpServlet {
         String year = req.getParameter("year");
         String city = req.getParameter("cityyy");
         String country = req.getParameter("country");
-        String gender = req.getParameter("radio");
+        String gender = req.getParameter("gender");
         return new User(fname, lname, email, phone, day, month, year, city, country, gender);
     }
 

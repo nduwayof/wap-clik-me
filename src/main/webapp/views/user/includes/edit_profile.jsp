@@ -13,14 +13,16 @@
             </div>
             <div class="form-group">
                 <input type="text" id="e" value="${user.email}" name="email" required="required"/>
-                <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d095bdb1b9bc90">[email&#160;protected]</a></label><i class="mtrl-select"></i>
+                <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection"
+                                                            class="__cf_email__" data-cfemail="d095bdb1b9bc90">[email&#160;protected]</a></label><i
+                    class="mtrl-select"></i>
             </div>
             <div class="form-group">
-                <input type="text" value="${user.phone}  "name="myphone" required="required"/>
+                <input type="text" value="${user.phone}  " name="myphone" required="required"/>
                 <label class="control-label" for="input">Phone No.</label><i class="mtrl-select"></i>
             </div>
             <div class="dob">
-                <div class="form-group" >
+                <div class="form-group">
                     <select value="${user.dab}" name="day">
                         <option value="Day">Day</option>
                         <option>1</option>
@@ -93,13 +95,13 @@
             </div>
 
             <label>
-                        <select value="${user.gender}" name="gender">
-                            <option value="gender">Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
+                <select value="${user.gender}" name="gender">
+                    <option value="gender">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
 
-                    </label>
+            </label>
 
             <div class="form-group half">
                 <input type="text" id="city" value="${user.city}" name="city" required="required"/>
@@ -365,7 +367,7 @@
                 <label class="control-label" for="textarea">About Me</label><i class="mtrl-select"></i>
             </div>
             <div class="submit-btns">
-                <button type="reset" class="mtr-btn" ><span>Cancel</span></button>
+                <button type="reset" class="mtr-btn"><span>Cancel</span></button>
                 <button type="submit" class="mtr-btn"><span>Update</span></button>
             </div>
         </form>
