@@ -1,4 +1,3 @@
-<jsp:useBean id="advertisements" scope="request" type="java.util.List"/>
 <div class="widget">
     <h4 class="widget-title">Shortcuts</h4>
     <ul class="naves">

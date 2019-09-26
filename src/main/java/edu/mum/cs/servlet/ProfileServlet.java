@@ -43,7 +43,7 @@ public class ProfileServlet extends HttpServlet {
         try {
             User user;
             if (request.getSession() != null) {
-                user = (User) request.getSession().getAttribute("authenticated");
+                user = (User) request.getSession().getAttribute("user");
                 request.setAttribute("user", user);
                 RequestDispatcher rd = request.getRequestDispatcher("views/user/profile.jsp");
                 rd.forward(request, response);

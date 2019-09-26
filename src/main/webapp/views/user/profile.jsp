@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>MUM ClickMe </title>
+    <title>MumBook || ${user.firstName} </title>
     <%-- include head  --%>
     <link rel="icon" href="resources/images/fav.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="resources/css/main.min.css">
