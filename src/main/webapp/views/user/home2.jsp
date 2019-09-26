@@ -59,7 +59,12 @@
                                 <div class="central-meta new-pst">
                                     <div class="new-postbox">
                                         <figure>
-                                            <img src="../../resources/images/resources/admin2.jpg" alt="">
+                                            <c:if test="${empty user.image}">
+                                                <img src="../../resources/images/resources/admin2.jpg" alt="">
+                                            </c:if>
+                                            <c:if test="${not empty user.image}">
+                                                <img src="uploads/user/display/${user.image}" alt="" style="height: 45px">
+                                            </c:if>
                                         </figure>
                                         <div class="newpst-input">
                                             <%-- include post form  --%>
@@ -167,5 +172,8 @@
 <script src="resources/js/main.min.js"></script>
 <script src="resources/js/script.js"></script>
 <script src="resources/js/views/user/post.js" type="text/javascript"></script>
+
+<script src="resources/js/views/user/notifications.js" type="text/javascript"></script>
+
 </body>
 </html>

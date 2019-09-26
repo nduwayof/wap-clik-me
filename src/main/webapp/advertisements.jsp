@@ -137,6 +137,15 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="link">Link <span class="text-danger">*</span></label>
+                                        <input type="url" name="link" id="link" class="form-control"
+                                               placeholder="Please provide the link" required/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col pull-right">
                                     <button type="submit" class="btn btn-primary ">
                                         <i class="fa fa-save"></i>
@@ -146,7 +155,6 @@
                                         <i class="fa fa-stop"></i>
                                         CANCEL
                                     </button>
-
                                 </div>
                             </div>
                         </form>
@@ -186,17 +194,17 @@
                                     <th><%=advertisement.getId()%></th>
                                     <td><%=advertisement.getTitle()%></td>
                                     <td><%=advertisement.getCompany()%></td>
-                                    <td id="user_data_<%=advertisement.getId()%>">
-                                        <%if(!advertisement.isBlocked()){%>
-                                        <a href="javascript:void(0)" class="btn btn-success btn-sm"
-                                           title="Active" onclick="changeStatus(<%=advertisement.getId()%>)">
-                                            <i class="fa fa-check"></i>
-                                        </a>
+                                    <td id="advert_data_<%=advertisement.getId()%>">
+                                        <%if(advertisement.isBlocked()){%>
+                                            <a href="javascript:void(0)" class="btn btn-danger btn-sm"
+                                               title="Locked" onclick="blockAdvert(<%=advertisement.getId()%>)">
+                                                <i class="fa fa-times"></i>
+                                            </a>
                                         <%}else{%>
-                                        <a href="javascript:void(0)" class="btn btn-danger btn-sm"
-                                           title="Inactive" onclick="changeStatus(<%=advertisement.getId()%>)">
-                                            <i class="fa fa-times"></i>
-                                        </a>
+                                            <a href="javascript:void(0)" class="btn btn-success btn-sm"
+                                               title="Unlocked" onclick="blockAdvert(<%=advertisement.getId()%>)">
+                                                <i class="fa fa-check"></i>
+                                            </a>
                                         <%}%>
                                     </td>
                                 </tr>

@@ -1,5 +1,4 @@
-<%@ page import="java.util.List" %>
-<%@ page import="edu.mum.cs.domain.Advertisement" %>
+<jsp:useBean id="advertisements" scope="request" type="java.util.List"/>
 <div class="widget">
     <h4 class="widget-title">Shortcuts</h4>
     <ul class="naves">
@@ -12,15 +11,21 @@
             <a href="timeline?rf=${user.id}" title="">Timeline</a>
         </li>
 
-
         <li>
             <i class="ti-files"></i>
             <a href="followers" title="">Followers</a>
         </li>
+
+        <li>
+            <i class="ti-files"></i>
+            <a href="following" title="">Following</a>
+        </li>
+
         <li>
             <i class="ti-user"></i>
             <a href="peopleNearby" title="">Find Nearby Users</a>
         </li>
+
         <li>
             <i class="ti-image"></i>
             <a href="images" title="">images</a>
@@ -29,7 +34,7 @@
 
         <li>
             <i class="ti-bell"></i>
-            <a href="javascript:void(0)" title="">Notifications</a>
+            <a href="notifications" title="">Notifications</a>
         </li>
 
         <li>
@@ -43,12 +48,15 @@
         </li>
     </ul>
 </div>
-
 <c:forEach var="image" items="${advertisements}" varStatus="counter">
-    <div class="widget">
-        <h4 class="widget-title">${image.company}</h4>
-        <img src="uploads/advertisements/${image.image}" alt="uploads/advertisements/${image.image}" height="50px"/>
-    </div>
+    <c:if test="${not image.blocked}">
+        <a href="${image.link}" target="_blank">
+            <div class="widget">
+                <h4 class="widget-title">${image.company}</h4>
+                <img src="uploads/advertisements/${image.image}" alt="uploads/advertisements/${image.image}" height="50px"/>
+            </div>
+        </a>
+    </c:if>
 </c:forEach>
 
 

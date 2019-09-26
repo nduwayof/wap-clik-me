@@ -170,6 +170,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 <script src="resources/js/views/user/post.js" type="text/javascript"></script>
 <script src="resources/js/views/user/follow.js" type="text/javascript"></script>
+<script src="resources/js/views/user/notifications.js" type="text/javascript"></script>
 
 </body>
 </html>

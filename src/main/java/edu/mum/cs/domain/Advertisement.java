@@ -24,13 +24,18 @@ public class Advertisement implements Serializable {
     @Column(name =  "BLOCKED")
     private boolean blocked = Boolean.FALSE;
 
+    @Column(name = "LINK")
+    private String link;
+
     public Advertisement() {
     }
 
-    public Advertisement(String title, String company, String image) {
+    public Advertisement(String title, String company, String image, boolean blocked, String link) {
         this.title = title;
         this.company = company;
         this.image = image;
+        this.blocked = blocked;
+        this.link = link;
     }
 
     public long getId() {
@@ -73,6 +78,14 @@ public class Advertisement implements Serializable {
         this.blocked = blocked;
     }
 
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
     @Override
     public String toString() {
         return "Advertisement{" +
@@ -80,6 +93,8 @@ public class Advertisement implements Serializable {
                 ", title='" + title + '\'' +
                 ", company='" + company + '\'' +
                 ", image='" + image + '\'' +
+                ", blocked=" + blocked +
+                ", link='" + link + '\'' +
                 '}';
     }
 }

@@ -4,7 +4,13 @@
             <div class="user-post">
                 <div class="friend-info">
                     <figure>
+
+                        <c:if test="${empty user.image}">
                         <img src="../../resources/images/resources/friend-avatar10.jpg" alt="">
+                        </c:if>
+                        <c:if test="${not empty user.image}">
+                            <img src="uploads/user/display/${user.image}" alt="">
+                        </c:if>
                     </figure>
                     <div class="friend-name">
                         <ins><a href="#" title="" class="postUserName">${post.user.firstName} ${post.user.lastName}</a>
@@ -12,7 +18,9 @@
                         <span>published: ${post.time}</span>
                     </div>
                     <div class="post-meta">
+                        <c:if test="${not empty post.photo}">
                         <img src="uploads/${post.photo}" alt="post image" class="postImage">
+                        </c:if>
                         <div class="we-video-info">
                             <ul>
                                 <li>

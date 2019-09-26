@@ -1,5 +1,7 @@
 package edu.mum.cs.servlet;
 
+import edu.mum.cs.dao.user.IUserDao;
+import edu.mum.cs.dao.user.UserDao;
 import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
 import org.apache.commons.fileupload.FileItem;
@@ -67,6 +69,11 @@ public class EditDisplayPhotoServlet extends HttpServlet {
         User user = (User)session.getAttribute("user");
         user.setImage(photoName);
         session.setAttribute("user",user);
+
+        // read data
+        IUserDao userDao = new UserDao();
+        User dbUser = userDao.update(user);
+        session.setAttribute("user",dbUser);
 
         PrintWriter out = resp.getWriter();
         out.println("upload successful");

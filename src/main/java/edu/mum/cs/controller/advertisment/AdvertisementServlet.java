@@ -72,7 +72,8 @@ public class AdvertisementServlet extends HttpServlet {
             }
             String title = params.get("title");
             String company = params.get("company");
-            Advertisement advertisement = new Advertisement(title, company, imageName);
+            String link = params.get("link");
+            Advertisement advertisement = new Advertisement(title, company, imageName, Boolean.FALSE, link);
             advertisementDao.create(advertisement);
             response.sendRedirect("/advertisements");
         } catch (Exception ex) {

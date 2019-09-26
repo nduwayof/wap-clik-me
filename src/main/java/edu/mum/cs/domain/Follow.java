@@ -8,9 +8,9 @@ public class Follow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.MERGE)
     private User followed;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.MERGE)
     private User follower;
     private LocalDateTime followTime = LocalDateTime.now();
 

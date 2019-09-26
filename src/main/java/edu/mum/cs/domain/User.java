@@ -35,8 +35,10 @@ public class User implements Serializable {
     @Column(name = "PHONE_NUMBER", nullable = true)
     private String phone;
 
+
     @Column(name = "DATE_OF_BIRTH")
     private GregorianCalendar dab;
+
 
     @Column(name = "PASSWORD", nullable = true)
     private String password;
@@ -53,7 +55,7 @@ public class User implements Serializable {
     @Transient
     private List<Post> posts = new ArrayList<>();
 
-    @Column(name = "GENDER", nullable = false)
+    @Column(name = "GENDER", nullable = true)
     private String gender;
 
 

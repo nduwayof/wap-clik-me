@@ -5,6 +5,7 @@ import edu.mum.cs.dao.user.IUserDao;
 import edu.mum.cs.dao.user.UserDao;
 import edu.mum.cs.domain.User;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -38,23 +37,22 @@ public class ProfileServlet extends HttpServlet {
         dao = new UserDao();
     }
 
-    private List<User> profilelist = new ArrayList<>();
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        //  req.getRequestDispatcher("views/user/profile.jsp").forward(req,resp);
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            List<User> users = new ArrayList<>();
-            // List<User> users = dao.findAll();
-            request.setAttribute("users", users);
-            request.getRequestDispatcher("views/user/profile.jsp")
-                    .forward(request, resp);
-            resp.sendRedirect("/profile");
+            User user;
+            if (request.getSession() != null) {
+                user = (User) request.getSession().getAttribute("authenticated");
+                request.setAttribute("user", user);
+                RequestDispatcher rd = request.getRequestDispatcher("views/user/profile.jsp");
+                rd.forward(request, response);
+            } else {
+                response.sendRedirect("/");
+            }
         } catch (Exception ex) {
             LOGGER.log(Level.SEVERE, ex.getMessage());
         }
-
     }
 
     @Override
@@ -62,7 +60,6 @@ public class ProfileServlet extends HttpServlet {
         try {
             HttpSession session = req.getSession();
             User user = userprofile(req);
-            //User dnUsrer = (UserDao)dao.save(user);
             session.setAttribute("user", user);
             dao.update(user);
             resp.sendRedirect("profile");
@@ -72,7 +69,6 @@ public class ProfileServlet extends HttpServlet {
             resp.setCharacterEncoding("UTF-8");
             writer.print(userJsonString);
             writer.flush();
-
         } catch (Exception ex) {
             LOGGER.log(Level.SEVERE, ex.getMessage());
         }
@@ -84,15 +80,13 @@ public class ProfileServlet extends HttpServlet {
         String fname = req.getParameter("firstname");
         String lname = req.getParameter("lastname");
         String email = req.getParameter("email");
-
-
         String phone = req.getParameter("myphone");
         String day = req.getParameter("day");
         String month = req.getParameter("month");
         String year = req.getParameter("year");
         String city = req.getParameter("cityyy");
         String country = req.getParameter("country");
-        String gender = req.getParameter("radio");
+        String gender = req.getParameter("gender");
         return new User(fname, lname, email, phone, day, month, year, city, country, gender);
     }
 
