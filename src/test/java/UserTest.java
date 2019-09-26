@@ -23,35 +23,7 @@ public class UserTest {
         user.setAccess("user");
         user.setPassword("fabrice");
         IUserDao userDao = new UserDao();
-        User userDb = userDao.create(user);
-
-        Post  post = new Post();
-        post.setUser(userDb);
-        post.setDetails("I love Kigali");
-        post.setTime(LocalDateTime.now());
-        post.setEnabled(Boolean.TRUE);
-        IPostDao postDao = new PostDao();
-        Post postObj = postDao.create(post);
-
-        List<User> users = userDao.findAll();
-        for(User userObject : users){
-           User userObj =  userDao.findById(userObject.getId());
-           System.out.println(userObj.toString());
-
-        }
-
-        List<Post> posts = postDao.getPostsUserHome(userDao.findById(1l));
-        for(Post post1 : posts){
-            //User userObj =  userDao.findById(userObject.getId());
-            System.out.println(post1.toString());
-        }
-        ICommentDao cmdoa =  new CommentDao();
-        List<Comment> comments = cmdoa.findCommentsByPost(postDao.findById(1l));
-
-        for(Comment comment : comments){
-            //User userObj =  userDao.findById(userObject.getId());
-            System.out.println(comment.toString());
-        }
+        userDao.create(user);
     }
 
 }

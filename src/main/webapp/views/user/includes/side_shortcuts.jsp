@@ -26,12 +26,6 @@
         </li>
 
         <li>
-            <i class="ti-image"></i>
-            <a href="images" title="">images</a>
-        </li>
-
-
-        <li>
             <i class="ti-bell"></i>
             <a href="notifications" title="">Notifications</a>
         </li>
