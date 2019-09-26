@@ -10143,4 +10143,11 @@ aside.sidebar.full-style {
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
+div.banermeta p#description{
+    font-size: 17px;
+}
+
+div.banermeta p#temp{
+    font-size: 30px;
+}
 

@@ -8,11 +8,20 @@ import java.util.List;
 public class UserTest {
 
     public static void main(String[] args) {
+        User user = new User();
+        user.setFirstName("Fabrice");
+        user.setLastName("Nduwayo");
+        user.setGender("Male");
+        user.setEmail("nduwayof@gmail.com");
+        user.setPassword("fabrice");
+        user.setTwitterAccount("NduwayoFabrice");
+        user.setAccess("user");
         IUserDao userDao = new UserDao();
+        userDao.create(user);
         List<User> users = userDao.findAll();
-        for(User user : users){
-           User userObj =  userDao.findById(user.getId());
-           System.out.println(userObj.toString());
+        for(User userObj : users){
+           User userObject =  userDao.findById(userObj.getId());
+           System.out.println(userObject.toString());
         }
     }
 

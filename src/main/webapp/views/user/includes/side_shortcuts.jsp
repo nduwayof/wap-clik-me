@@ -40,4 +40,4 @@
             <a href="/logout" title="">Logout</a>
         </li>
     </ul>
-</div><!-- Shortcuts -->
+</div>

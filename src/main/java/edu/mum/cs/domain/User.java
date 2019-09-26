@@ -51,6 +51,9 @@ public class User implements Serializable {
     @Column(name = "LOGGED_IN")
     private boolean loggedIn;
 
+    @Column(name = "TWITTER_ACCOUNT")
+    private String twitterAccount;
+
 
     @Transient
     List<User> followers = new ArrayList<>();
@@ -276,6 +279,14 @@ public class User implements Serializable {
 
     public void setLoggedIn(boolean loggedIn) {
         this.loggedIn = loggedIn;
+    }
+
+    public String getTwitterAccount() {
+        return twitterAccount;
+    }
+
+    public void setTwitterAccount(String twitterAccount) {
+        this.twitterAccount = twitterAccount;
     }
 
     @Override

@@ -94,7 +94,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span class="copyright">© Winku 2018. All rights reserved.</span>
+                    <span class="copyright">© MumBook 2019. All rights reserved.</span>
                     <i><img src="images/credit-cards.png" alt=""></i>
                 </div>
             </div>
@@ -163,13 +163,9 @@
             <label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
         </div>
     </form>
-</div><!-- side panel -->
-
+</div>
 <script src="resources/js/main.min.js"></script>
 <script src="resources/js/script.js"></script>
-<script src="resources/js/map-init.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 <script src="resources/js/views/user/post.js" type="text/javascript"></script>
-
 </body>
 </html>
