@@ -1,4 +1,4 @@
-<%--
+<%@ page import="javax.swing.*" %><%--
   Created by IntelliJ IDEA.
   User: 610158
   Date: 9/25/2019
@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -587,6 +588,8 @@
 <script data-cfasync="false" src="https://wpkixx.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="resources/js/main.min.js"></script>
 <script src="resources/js/script.js"></script>
+
+
 
 </body>
 </html>

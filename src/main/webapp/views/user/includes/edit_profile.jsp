@@ -2,26 +2,26 @@
     <div class="editing-info">
         <h5 class="f-title"><i class="ti-info-alt"></i> Edit Basic Information</h5>
 
-        <form method="post">
+        <form method="post" action="profile">
             <div class="form-group half">
-                <input type="text" id="input" value="${user.firstName}" required="required"/>
+                <input type="text" id="input" value="${user.firstName}" name="firstname" required="required"/>
                 <label class="control-label" for="input">First Name</label><i class="mtrl-select"></i>
             </div>
             <div class="form-group half">
-                <input type="text" required="required"/>
+                <input type="text" id="last" value="${user.lastName}" name="lastname" required="required"/>
                 <label class="control-label" for="input">Last Name</label><i class="mtrl-select"></i>
             </div>
             <div class="form-group">
-                <input type="text" required="required"/>
+                <input type="text" id="e" value="${user.email}" name="email" required="required"/>
                 <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d095bdb1b9bc90">[email&#160;protected]</a></label><i class="mtrl-select"></i>
             </div>
             <div class="form-group">
-                <input type="text" required="required"/>
+                <input type="text" value="${user.phone}  "name="myphone" required="required"/>
                 <label class="control-label" for="input">Phone No.</label><i class="mtrl-select"></i>
             </div>
             <div class="dob">
-                <div class="form-group">
-                    <select>
+                <div class="form-group" >
+                    <select value="${user.dab}" name="day">
                         <option value="Day">Day</option>
                         <option>1</option>
                         <option>2</option>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="form-group">
                     <select>
-                        <option value="month">Month</option>
+                        <option value="${day.dab}" name="month">Month</option>
                         <option>Jan</option>
                         <option>Feb</option>
                         <option>Mar</option>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group">
                     <select>
-                        <option value="year">Year</option>
+                        <option value="${name.dab}" name="year">Year</option>
                         <option>2000</option>
                         <option>2001</option>
                         <option>2002</option>
@@ -91,24 +91,22 @@
                     </select>
                 </div>
             </div>
-            <div class="form-radio">
-                <div class="radio">
-                    <label>
-                        <input type="radio" checked="checked" name="radio"><i class="check-box"></i>Male
+
+            <label>
+                        <select value="${user.gender}" name="gender">
+                            <option value="gender">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+
                     </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="radio"><i class="check-box"></i>Female
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="text" required="required"/>
+
+            <div class="form-group half">
+                <input type="text" id="city" value="${user.city}" name="city" required="required"/>
                 <label class="control-label" for="input">City</label><i class="mtrl-select"></i>
             </div>
             <div class="form-group">
-                <select>
+                <select value="${user.country}" name="country">
                     <option value="country">Country</option>
                     <option value="AFG">Afghanistan</option>
                     <option value="ALA">Ƭand Islands</option>
@@ -175,6 +173,7 @@
                     <option value="DMA">Dominica</option>
                     <option value="DOM">Dominican Republic</option>
                     <option value="ECU">Ecuador</option>
+                    <option value="ECU">Ethiopia</option>
                     <option value="EGY">Egypt</option>
                     <option value="SLV">El Salvador</option>
                     <option value="GNQ">Equatorial Guinea</option>
@@ -366,8 +365,8 @@
                 <label class="control-label" for="textarea">About Me</label><i class="mtrl-select"></i>
             </div>
             <div class="submit-btns">
-                <button type="button" class="mtr-btn"><span>Cancel</span></button>
-                <button type="button" class="mtr-btn"><span>Update</span></button>
+                <button type="reset" class="mtr-btn" ><span>Cancel</span></button>
+                <button type="submit" class="mtr-btn"><span>Update</span></button>
             </div>
         </form>
     </div>

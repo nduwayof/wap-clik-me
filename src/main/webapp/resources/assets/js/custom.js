@@ -5,7 +5,7 @@ $(document).ready(function () {
     });
 
     $('#hide_form').click(function () {
-        hide_form();
+       hide_form();
     });
 
     $('#save_user').submit(function (event) {
@@ -31,8 +31,9 @@ $(document).ready(function () {
                         '<i class="fa fa-check"></i>' +
                         '</a>'+ '</td>' +
                         '</tr>'
+
                     );
-                    hide_form();
+                   // hide_form();
                 }
             });
         } else {

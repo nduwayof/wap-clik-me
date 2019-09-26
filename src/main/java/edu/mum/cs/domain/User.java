@@ -2,8 +2,10 @@ package edu.mum.cs.domain;
 
 
 import javax.persistence.*;
+import javax.xml.crypto.Data;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -18,24 +20,34 @@ public class User implements Serializable {
     @Column(name = "ID")
     private long id;
 
-    @Column(name = "FIRST_NAME", nullable = false)
+    @Column(name = "FIRST_NAME", nullable = true)
     private String firstName;
 
-    @Column(name = "LAST_NAME", nullable = false)
+    @Column(name = "LAST_NAME", nullable = true)
     private String lastName;
 
-    @Column(name = "EMAIL", nullable = false)
+    @Column(name = "EMAIL", nullable = true)
     private String email;
 
     private String image;
 
+    @Column(name="Phonenumber",nullable=true)
 
-    @Column(name = "PASSWORD", nullable = false)
+      private String phone;
+    @Column(name="dateofbirt",nullable = true)
+
+      private GregorianCalendar dab;
+
+    @Column(name = "PASSWORD", nullable = true)
     private String password;
 
-    @Column(name = "ACCESS", nullable = false)
+    @Column(name = "ACCESS", nullable = true)
     private String access;
+    @Column(name="City",nullable = true)
+    private String city;
 
+    @Column(name="Country",nullable = true)
+    private String country;
 
     @Transient
     private List<Post> posts = new ArrayList<>();
@@ -46,7 +58,7 @@ public class User implements Serializable {
     @Transient
     List<User>following = new ArrayList<>();
 
-    @Column(name = "GENDER", nullable = false)
+    @Column(name = "GENDER", nullable = true)
     private String gender;
 
 
@@ -89,6 +101,17 @@ public class User implements Serializable {
 
     public long getId() {
         return id;
+    }
+
+    public User(String firstName, String lastName, String email, String phone, String year,String month,String day, String city, String country,String gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.dab = dab;
+        this.city = city;
+        this.country = country;
+        this.gender = gender;
     }
 
     /**
@@ -179,6 +202,14 @@ public class User implements Serializable {
      */
     public String getAccess() {
         return access;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     /**
@@ -276,4 +307,29 @@ public class User implements Serializable {
     public void setLoggedIn(boolean loggedIn) {
         this.loggedIn = loggedIn;
     }
+
+    public GregorianCalendar getDab() {
+        return dab;
+    }
+
+    public void setDab(GregorianCalendar dab) {
+        this.dab = dab;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
 }
