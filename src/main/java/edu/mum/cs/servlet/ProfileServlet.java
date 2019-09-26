@@ -1,17 +1,92 @@
 package edu.mum.cs.servlet;
 
+import com.google.gson.Gson;
+import edu.mum.cs.controller.user.UserController;
+import edu.mum.cs.dao.IAbstractDao;
+import edu.mum.cs.dao.user.UserDao;
+import edu.mum.cs.domain.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @WebServlet("/profile")
 public class ProfileServlet extends HttpServlet {
 
+    private static final Logger LOGGER = Logger.getLogger(ProfileServlet.class.getName());
+    private IAbstractDao dao;
+    private Gson gson = new Gson();
+
+
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("views/user/profile.jsp").forward(req,resp);
+    public void init() throws ServletException {
+        super.init();
+        dao = new UserDao();
     }
+
+       private List<User>profilelist=new ArrayList<>();
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+      //  req.getRequestDispatcher("views/user/profile.jsp").forward(req,resp);
+
+        try{
+            List<User>users=new ArrayList<>();
+           // List<User> users = dao.findAll();
+            request.setAttribute("users", users);
+            request.getRequestDispatcher("views/user/profile.jsp")
+                    .forward(request, resp);
+            resp.sendRedirect("/profile");
+        }catch (Exception ex){
+            LOGGER.log(Level.SEVERE, ex.getMessage());
+        }
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        try{
+            HttpSession session = req.getSession();
+            User user = userprofile(req);
+            //User dnUsrer = (UserDao)dao.save(user);
+           session.setAttribute("user",user);
+               dao.save(user);
+            resp.sendRedirect("profile");
+            PrintWriter writer = resp.getWriter();
+            String userJsonString = this.gson.toJson(user);
+            resp.setContentType("application/json");
+            resp.setCharacterEncoding("UTF-8");
+            writer.print(userJsonString);
+            writer.flush();
+
+        }catch (Exception ex){
+            LOGGER.log(Level.SEVERE, ex.getMessage());
+        }
+
+
+    }
+    private User userprofile(HttpServletRequest req){
+        String fname=req.getParameter("firstname");
+        String lname=req.getParameter("lastname");
+        String email=req.getParameter("email");
+
+
+        String phone=req.getParameter("myphone");
+        String day=req.getParameter("day");
+        String month=req.getParameter("month");
+        String year=req.getParameter("year");
+        String city=req.getParameter("cityyy");
+        String country=req.getParameter("country");
+        String gender=req.getParameter("radio");
+        return new User(fname, lname, email, phone, day, month,year,city,country,gender);
+    }
+
 }

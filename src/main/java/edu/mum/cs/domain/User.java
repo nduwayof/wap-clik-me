@@ -2,8 +2,10 @@ package edu.mum.cs.domain;
 
 
 import javax.persistence.*;
+import javax.xml.crypto.Data;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -18,30 +20,50 @@ public class User implements Serializable {
     @Column(name = "ID")
     private long id;
 
-    @Column(name = "FIRST_NAME", nullable = false)
+    @Column(name = "FIRST_NAME", nullable = true)
     private String firstName;
 
-    @Column(name = "LAST_NAME", nullable = false)
+    @Column(name = "LAST_NAME", nullable = true)
     private String lastName;
 
-    @Column(name = "EMAIL", nullable = false)
+    @Column(name = "EMAIL", nullable = true)
     private String email;
 
     @Column(name = "IMAGE")
     private String image;
 
+    @Column(name="Phonenumber",nullable=true)
 
-    @Column(name = "PASSWORD", nullable = false)
+      private String phone;
+    @Column(name="dateofbirt",nullable = true)
+
+      private GregorianCalendar dab;
+
+    @Column(name = "PASSWORD", nullable = true)
     private String password;
 
-    @Column(name = "ACCESS", nullable = false)
+    @Column(name = "ACCESS", nullable = true)
     private String access;
+    @Column(name="City",nullable = true)
+    private String city;
 
+    @Column(name="Country",nullable = true)
+    private String country;
 
     @Transient
     private List<Post> posts = new ArrayList<>();
 
+<<<<<<< HEAD
+    @Transient
+    List<User> followers = new ArrayList<>();
+
+    @Transient
+    List<User>following = new ArrayList<>();
+
+    @Column(name = "GENDER", nullable = true)
+=======
     @Column(name = "GENDER", nullable = false)
+>>>>>>> 4cce2da088c3d77be3144dcff0e8fa7e2e20080e
     private String gender;
 
 
@@ -96,6 +118,17 @@ public class User implements Serializable {
 
     public long getId() {
         return id;
+    }
+
+    public User(String firstName, String lastName, String email, String phone, String year,String month,String day, String city, String country,String gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.dab = dab;
+        this.city = city;
+        this.country = country;
+        this.gender = gender;
     }
 
     /**
@@ -186,6 +219,14 @@ public class User implements Serializable {
      */
     public String getAccess() {
         return access;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     /**
@@ -284,6 +325,32 @@ public class User implements Serializable {
         this.loggedIn = loggedIn;
     }
 
+<<<<<<< HEAD
+    public GregorianCalendar getDab() {
+        return dab;
+    }
+
+    public void setDab(GregorianCalendar dab) {
+        this.dab = dab;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+=======
     public String getTwitterAccount() {
         return twitterAccount;
     }
@@ -318,4 +385,5 @@ public class User implements Serializable {
                 ", following=" + following +
                 '}';
     }
+>>>>>>> 4cce2da088c3d77be3144dcff0e8fa7e2e20080e
 }
