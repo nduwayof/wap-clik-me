@@ -45,8 +45,8 @@
                 <div class="timeline-info">
                     <ul>
                         <li class="admin-name">
-                            <h5>Janice Griffith</h5>
-                            <span>Group Admin</span>
+                            <h5>${user.firstName} ${user.lastName}</h5>
+                            <span>${user.access}</span>
                         </li>
                         <li>
                             <a class="active" href="time-line.html" title="" data-ripple="">time line</a>
