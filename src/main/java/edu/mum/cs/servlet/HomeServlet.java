@@ -34,8 +34,7 @@ public class HomeServlet extends HttpServlet {
     private IAdvertisementDao advertisementDao;
 
 
-
-
+    @Override
     public void init() throws ServletException {
         super.init();
         this.advertisementDao = new AdvertisementDao();
@@ -47,14 +46,9 @@ public class HomeServlet extends HttpServlet {
 
             // add testing date
             PostService postService = new PostService();
-            IUserDao userDao = new UserDao();
             INotificationDao notificationDao = new NotificationDao();
             HttpSession session = req.getSession();
             User user;
-            //User user = (User) session.getAttribute("user");
-
-
-
 
             List<Advertisement> advertisements = advertisementDao.findAll();
             req.setAttribute("advertisements", advertisements);

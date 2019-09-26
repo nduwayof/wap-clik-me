@@ -9,7 +9,6 @@ import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -17,13 +16,12 @@ public class UserTest {
 
     public static void main(String[] args) {
         User user = new User();
-
-        user.setFirstName("Brian");
-        user.setLastName("Bwengye");
+        user.setFirstName("Fabrice");
+        user.setLastName("Nduwayo");
         user.setGender("Male");
-        user.setEmail("bb@gmail.com");
+        user.setEmail("nduwayof@gmail.com");
         user.setAccess("user");
-        user.setPassword("brian");
+        user.setPassword("fabrice");
         IUserDao userDao = new UserDao();
         User userDb = userDao.create(user);
 

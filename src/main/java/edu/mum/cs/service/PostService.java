@@ -29,7 +29,6 @@ public class PostService {
     }
     public void addPostNotification(Post post){
         INotificationDao notificationDao = new NotificationDao();
-        UserService userService = new UserService();
         IUserDao userDao = new UserDao();
 
         User postUser = post.getUser();

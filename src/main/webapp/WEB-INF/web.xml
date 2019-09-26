@@ -5,7 +5,7 @@
     <display-name>Archetype Created Web Application</display-name>
     <context-param>
         <param-name>imageUploads</param-name>
-        <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads</param-value>
+        <param-value>/Users/NF/Documents/Java Projects/SpringBoot/wap_project/src/main/webapp/uploads</param-value>
     </context-param>
     <context-param>
         <param-name>advertisements</param-name>
@@ -13,11 +13,11 @@
     </context-param>
     <context-param>
         <param-name>imageUploadsCover</param-name>
-        <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads\user\cover</param-value>
+        <param-value>/Users/NF/Documents/Java Projects/SpringBoot/wap_project/src/main/webapp/uploads/user/cover</param-value>
     </context-param>
     <context-param>
         <param-name>imageUploadsDisplay</param-name>
-        <param-value>C:\Users\610158\Desktop\WAP\projects\wap-clik-me\src\main\webapp\uploads\user\display</param-value>
+        <param-value>/Users/NF/Documents/Java Projects/SpringBoot/wap_project/src/main/webapp/uploads/user/display</param-value>
     </context-param>
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
