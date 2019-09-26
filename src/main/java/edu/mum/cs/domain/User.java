@@ -29,6 +29,7 @@ public class User implements Serializable {
     @Column(name = "EMAIL", nullable = true)
     private String email;
 
+    @Column(name = "IMAGE")
     private String image;
 
     @Column(name="Phonenumber",nullable=true)
@@ -52,6 +53,7 @@ public class User implements Serializable {
     @Transient
     private List<Post> posts = new ArrayList<>();
 
+<<<<<<< HEAD
     @Transient
     List<User> followers = new ArrayList<>();
 
@@ -59,15 +61,30 @@ public class User implements Serializable {
     List<User>following = new ArrayList<>();
 
     @Column(name = "GENDER", nullable = true)
+=======
+    @Column(name = "GENDER", nullable = false)
+>>>>>>> 4cce2da088c3d77be3144dcff0e8fa7e2e20080e
     private String gender;
 
 
     @Column(name = "ACTIVE")
     private  boolean active = Boolean.TRUE;
 
+    @Column(name = "LOGGED_IN")
     private boolean loggedIn;
 
+    @Column(name = "TWITTER_ACCOUNT")
+    private String twitterAccount;
 
+    @Column(name = "TIMELINE_PHONE")
+    private String timelinePhoto;
+
+
+    @Transient
+    List<User> followers = new ArrayList<>();
+
+    @Transient
+    List<User>following = new ArrayList<>();
 
     /**
      * Instantiates a new User.
@@ -308,6 +325,7 @@ public class User implements Serializable {
         this.loggedIn = loggedIn;
     }
 
+<<<<<<< HEAD
     public GregorianCalendar getDab() {
         return dab;
     }
@@ -332,4 +350,40 @@ public class User implements Serializable {
         this.country = country;
     }
 
+=======
+    public String getTwitterAccount() {
+        return twitterAccount;
+    }
+
+    public void setTwitterAccount(String twitterAccount) {
+        this.twitterAccount = twitterAccount;
+    }
+
+    public String getTimelinePhoto() {
+        return timelinePhoto;
+    }
+
+    public void setTimelinePhoto(String timelinePhoto) {
+        this.timelinePhoto = timelinePhoto;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", image='" + image + '\'' +
+                ", password='" + password + '\'' +
+                ", access='" + access + '\'' +
+                ", posts=" + posts +
+                ", gender='" + gender + '\'' +
+                ", active=" + active +
+                ", loggedIn=" + loggedIn +
+                ", followers=" + followers +
+                ", following=" + following +
+                '}';
+    }
+>>>>>>> 4cce2da088c3d77be3144dcff0e8fa7e2e20080e
 }

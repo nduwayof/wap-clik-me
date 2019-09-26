@@ -1,16 +1,22 @@
+<%@ page import="edu.mum.cs.domain.User" %>
 <div class="widget">
     <div class="banner medium-opacity bluesh">
-        <div class="bg-image" style="background-image: url(images/resources/baner-widgetbg.jpg)"></div>
         <div class="baner-top">
-            <span><img alt="" src="images/book-icon.png"></span>
-            <i class="fa fa-ellipsis-h"></i>
+            <i class="fa fa-cloud fa-2x"></i>
         </div>
         <div class="banermeta">
-            <p>
-                create your own favourit page.
-            </p>
-            <span>like them all</span>
-            <a data-ripple="" title="" href="index.html#">start now!</a>
+            <p id="description"></p>
+            <p id="temp"></p>
+            <p id="location"></p>
         </div>
     </div>
 </div>
+<%
+    User user = (User)session.getAttribute("authenticated");
+    String twitter = "https://twitter.com/"+user.getTwitterAccount();
+    if(user.getTwitterAccount() != null){
+%>
+<div class="widget">
+    <a class="twitter-timeline" data-height="800" data-theme="dark" href="<%=twitter%>">Tweets by <%=user.getFirstName() +" "+ user.getLastName()%></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<%}%>

@@ -1,3 +1,4 @@
+<%--
 <div class="widget">
     <h4 class="widget-title">Recent Activity</h4>
     <ul class="activitiez">
@@ -22,4 +23,4 @@
             </div>
         </li>
     </ul>
-</div><!-- recent activites -->
+</div><!-- recent activites -->--%>

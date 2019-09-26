@@ -8,17 +8,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "POSTS")
 public class Post implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private long id;
+
+    @Column(name = "DETAILS")
     private String details;
+
+    @Column(name = "PHOTO")
     private String photo;
+
+    @Column(name = "TIME")
     private LocalDateTime time;
-    @OneToOne
-    private User user;
+
+    @Column(name = "ENABLED")
     private Boolean enabled;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "USER_ID")
+    private User user;
+
 
     @Transient
     private List<Comment> comments = new ArrayList<>();

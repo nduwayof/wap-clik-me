@@ -1,10 +1,13 @@
 package edu.mum.cs.controller.user;
 
 import com.google.gson.Gson;
-import edu.mum.cs.dao.IAbstractDao;
+import edu.mum.cs.dao.GenericJpaDao;
+import edu.mum.cs.dao.user.IUserDao;
 import edu.mum.cs.dao.user.UserDao;
 import edu.mum.cs.domain.User;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,10 +20,12 @@ import java.util.logging.Logger;
 public class StatusController extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(StatusController.class.getName());
-    private IAbstractDao<User> dao;
+    private IUserDao dao;
     private Gson gson = new Gson();
 
-    public StatusController(){
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
         dao = new UserDao();
     }
 
@@ -34,9 +39,9 @@ public class StatusController extends HttpServlet {
                user.setActive(Boolean.FALSE);
            else
                user.setActive(Boolean.TRUE);
-           dao.save(user);
+           User userObj = dao.create(user);
            PrintWriter writer = response.getWriter();
-           String userJsonString = this.gson.toJson(user);
+           String userJsonString = this.gson.toJson(userObj);
            response.setContentType("application/json");
            response.setCharacterEncoding("UTF-8");
            writer.print(userJsonString);
