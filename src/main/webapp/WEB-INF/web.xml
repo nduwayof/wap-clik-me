@@ -9,7 +9,7 @@
     </context-param>
     <context-param>
         <param-name>advertisements</param-name>
-        <param-value>/Users/NF/Documents/Java Projects/SpringBoot/wap_project/src/main/webapp/uploads/advertisements</param-value>
+        <param-value>C:\Users\bsur9\Desktop\final-project\wap-clik-me\src\main\webapp\uploads\advertisements</param-value>
     </context-param>
     <context-param>
         <param-name>imageUploadsCover</param-name>

@@ -9,12 +9,12 @@ public class UserTest {
 
     public static void main(String[] args) {
         User user = new User();
-        user.setFirstName("Fabrice");
-        user.setLastName("Nduwayo");
-        user.setGender("Male");
-        user.setEmail("nduwayof@gmail.com");
-        user.setPassword("fabrice");
-        user.setTwitterAccount("NduwayoFabrice");
+        user.setFirstName("Bisrat");
+        user.setLastName("Kidane");
+        user.setGender("Female");
+        user.setEmail("bsur91@gmail.com");
+        user.setPassword("12345");
+        user.setTwitterAccount("Arsenal");
         user.setAccess("user");
         IUserDao userDao = new UserDao();
         userDao.create(user);
