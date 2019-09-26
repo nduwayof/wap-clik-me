@@ -115,9 +115,9 @@
 
                         <li id="postCommentsLiTemplate">
                             <div class="comet-avatar">
-                                <c:if test="${comment.user.image}">
-                                    <img src="uploads/user/${comment.user.image}" alt="userImage"
-                                         class="commentUserImage">
+
+                                <c:if test="${not empty comment.user.image}" >
+                                    <img src="uploads/user/${comment.user.image}" alt="userImage" class="commentUserImage">
                                 </c:if>
                             </div>
                             <div class="we-comment">
