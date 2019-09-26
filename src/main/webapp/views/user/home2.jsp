@@ -10,7 +10,11 @@
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <title>MUM ClickMe ${user.firstName} ${user.lastName} Home</title>
-    <%@include file="includes/head.jsp" %>
+    <link rel="icon" href="resources/images/fav.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="resources/css/main.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/color.css">
+    <link rel="stylesheet" href="resources/css/responsive.css">
 
 </head>
 <body>

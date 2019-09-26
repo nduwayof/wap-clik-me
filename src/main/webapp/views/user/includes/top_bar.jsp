@@ -15,7 +15,7 @@
         </ul>
         <div class="user-img">
             <c:if test="${empty user.image}">
-            <img src="../../resources/images/resources/admin.jpg" alt="">
+                <img src="../../resources/images/resources/admin.jpg" alt="">
             </c:if>
             <c:if test="${not empty user.image}">
                 <img src="uploads/user/display/${user.image}" alt="" style="height: 45px">

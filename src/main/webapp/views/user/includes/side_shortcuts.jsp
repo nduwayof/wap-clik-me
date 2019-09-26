@@ -1,4 +1,3 @@
-<jsp:useBean id="advertisements" scope="request" type="java.util.List"/>
 <div class="widget">
     <h4 class="widget-title">Shortcuts</h4>
     <ul class="naves">
@@ -25,12 +24,6 @@
             <i class="ti-user"></i>
             <a href="peopleNearby" title="">Find Nearby Users</a>
         </li>
-
-        <li>
-            <i class="ti-image"></i>
-            <a href="images" title="">images</a>
-        </li>
-
 
         <li>
             <i class="ti-bell"></i>

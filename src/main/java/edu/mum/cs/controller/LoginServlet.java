@@ -57,6 +57,7 @@ public class LoginServlet extends HttpServlet {
                 }
                 HttpSession session = req.getSession();
                 session.setAttribute("authenticated", userObj);
+                req.setAttribute("user", userObj);
                 doGet(req, resp);
             }
         } catch (Exception ex) {

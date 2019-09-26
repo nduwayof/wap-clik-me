@@ -32,10 +32,8 @@ public class HomeServlet extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(HomeServlet.class.getName());
     private IAdvertisementDao advertisementDao;
-
-
-
-
+    
+    @Override
     public void init() throws ServletException {
         super.init();
         this.advertisementDao = new AdvertisementDao();
@@ -47,14 +45,9 @@ public class HomeServlet extends HttpServlet {
 
             // add testing date
             PostService postService = new PostService();
-            IUserDao userDao = new UserDao();
             INotificationDao notificationDao = new NotificationDao();
             HttpSession session = req.getSession();
             User user;
-            //User user = (User) session.getAttribute("user");
-
-
-
 
             List<Advertisement> advertisements = advertisementDao.findAll();
             req.setAttribute("advertisements", advertisements);
@@ -62,7 +55,7 @@ public class HomeServlet extends HttpServlet {
             if (session != null) {
 
                 user = (User) session.getAttribute("authenticated");
-                req.setAttribute("user", user);
+                //req.setAttribute("user", user);
 
                 session.setAttribute("user",user);
 
@@ -73,7 +66,7 @@ public class HomeServlet extends HttpServlet {
                 RequestDispatcher rd = req.getRequestDispatcher("views/user/home2.jsp");
                 rd.forward(req, resp);
             } else {
-                resp.sendRedirect("/");
+                resp.sendRedirect("");
             }
         }catch (Exception ex){
             LOGGER.log(Level.SEVERE, ex.getMessage());
