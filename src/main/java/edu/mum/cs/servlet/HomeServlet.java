@@ -31,15 +31,7 @@ import java.util.logging.Logger;
 public class HomeServlet extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(HomeServlet.class.getName());
-    private IAdvertisementDao advertisementDao;
-
-
-
-
-    public void init() throws ServletException {
-        super.init();
-        this.advertisementDao = new AdvertisementDao();
-    }
+    private IAdvertisementDao advertisementDao = new AdvertisementDao();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
@@ -62,7 +54,7 @@ public class HomeServlet extends HttpServlet {
             if (session != null) {
 
                 user = (User) session.getAttribute("authenticated");
-                req.setAttribute("user", user);
+                //req.setAttribute("user", user);
 
                 session.setAttribute("user",user);
 
@@ -73,7 +65,7 @@ public class HomeServlet extends HttpServlet {
                 RequestDispatcher rd = req.getRequestDispatcher("views/user/home2.jsp");
                 rd.forward(req, resp);
             } else {
-                resp.sendRedirect("/");
+                resp.sendRedirect("");
             }
         }catch (Exception ex){
             LOGGER.log(Level.SEVERE, ex.getMessage());
