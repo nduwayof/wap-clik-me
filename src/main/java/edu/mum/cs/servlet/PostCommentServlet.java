@@ -1,9 +1,14 @@
 package edu.mum.cs.servlet;
 
 import com.google.gson.Gson;
+import edu.mum.cs.dao.post.CommentDao;
+import edu.mum.cs.dao.post.ICommentDao;
+import edu.mum.cs.dao.post.IPostDao;
+import edu.mum.cs.dao.post.PostDao;
 import edu.mum.cs.domain.Comment;
 import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
+import edu.mum.cs.service.PostService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,22 +25,21 @@ public class PostCommentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String comment = req.getParameter("postComment");
-        int postId = Integer.valueOf(req.getParameter("commentPostId"));
+        long postId = Long.valueOf(req.getParameter("commentPostId"));
+
+        // db access
+        IPostDao postDao = new PostDao();
+        ICommentDao commentDao = new CommentDao();
+        PostService postService = new PostService();
         Comment comment1 = new Comment();
         comment1.setComment(comment);
         comment1.setTime(LocalDateTime.now());
+        comment1.setPost(postDao.findById(postId));
+        User user = (User)req.getSession().getAttribute("user");
+        comment1.setUser(user);
+        commentDao.create(comment1);
 
-        // add post to the database
-        HttpSession session = req.getSession();
-        List<Post> posts = (List<Post>)session.getAttribute("posts");
-        Post post = posts.get(postId-1);
-
-        User user = (User)session.getAttribute("user");
-        post.getComments().add(comment1);
-
-        session.setAttribute("posts",posts);
-        //post.setUser(new User());
-        // save post to database
+        List<Post> posts = postService.getPostsUserHome(user);
         PrintWriter out = resp.getWriter();
 
         // convert to json

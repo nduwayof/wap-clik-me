@@ -8,11 +8,12 @@ import java.util.List;
 public  abstract class GenericJpaDao<K, E>  implements  IGenericJpaDao<K, E>{
 
     protected Class<E> entityClass;
-    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
+
+    public static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
             .createEntityManagerFactory("click-me");
 
-    private EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
-    private EntityTransaction transaction = manager.getTransaction();
+    protected EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+    protected EntityTransaction transaction = manager.getTransaction();
 
     @Transactional
     public void flush() {

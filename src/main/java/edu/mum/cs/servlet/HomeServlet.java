@@ -1,10 +1,19 @@
 package edu.mum.cs.servlet;
 
+
+import edu.mum.cs.dao.post.INotificationDao;
+import edu.mum.cs.dao.post.NotificationDao;
+import edu.mum.cs.dao.user.IUserDao;
+import edu.mum.cs.dao.user.UserDao;
+import edu.mum.cs.domain.Comment;
+
 import edu.mum.cs.dao.advertisement.AdvertisementDao;
 import edu.mum.cs.dao.advertisement.IAdvertisementDao;
 import edu.mum.cs.domain.Advertisement;
+
 import edu.mum.cs.domain.Post;
 import edu.mum.cs.domain.User;
+import edu.mum.cs.service.PostService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +33,9 @@ public class HomeServlet extends HttpServlet {
     private static final Logger LOGGER = Logger.getLogger(HomeServlet.class.getName());
     private IAdvertisementDao advertisementDao;
 
-    @Override
+
+
+
     public void init() throws ServletException {
         super.init();
         this.advertisementDao = new AdvertisementDao();
@@ -33,13 +44,32 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         try {
-            List<Advertisement> advertisements = advertisementDao.findAll();
-            req.setAttribute("advertisements", advertisements);
+
+            // add testing date
+            PostService postService = new PostService();
+            IUserDao userDao = new UserDao();
+            INotificationDao notificationDao = new NotificationDao();
             HttpSession session = req.getSession();
             User user;
+            //User user = (User) session.getAttribute("user");
+
+
+
+
+            List<Advertisement> advertisements = advertisementDao.findAll();
+            req.setAttribute("advertisements", advertisements);
+
             if (session != null) {
+
                 user = (User) session.getAttribute("authenticated");
                 req.setAttribute("user", user);
+
+                session.setAttribute("user",user);
+
+                session.setAttribute("notifications",notificationDao.findAll());
+
+                req.setAttribute("posts",postService.getPostsUserHome(user));
+
                 RequestDispatcher rd = req.getRequestDispatcher("views/user/home2.jsp");
                 rd.forward(req, resp);
             } else {

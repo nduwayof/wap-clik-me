@@ -28,7 +28,7 @@ public class Post implements Serializable {
     @Column(name = "ENABLED")
     private Boolean enabled;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "USER_ID")
     private User user;
 
@@ -104,7 +104,6 @@ public class Post implements Serializable {
                 ", time=" + time +
                 ", user=" + user +
                 ", enabled=" + enabled +
-                ", comments=" + comments +
                 '}';
     }
 }

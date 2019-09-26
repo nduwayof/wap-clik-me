@@ -19,19 +19,28 @@ public class Notification implements Serializable {
     private LocalDateTime notTime = LocalDateTime.now();
 
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "POST_ID")
 
     private Post post;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "USER_ID")
     private User user;
+
+    private boolean seen = false;
 
     public Notification() {
     }
 
     public Notification(Post post, User user) {
+        this.post = post;
+        this.user = user;
+    }
+
+    public Notification(String details, LocalDateTime notTime, Post post, User user) {
+        this.details = details;
+        this.notTime = notTime;
         this.post = post;
         this.user = user;
     }
@@ -68,10 +77,28 @@ public class Notification implements Serializable {
         this.details = details;
     }
 
+    public LocalDateTime getNotTime() {
+        return notTime;
+    }
+
+    public void setNotTime(LocalDateTime notTime) {
+        this.notTime = notTime;
+    }
+
+    public boolean isSeen() {
+        return seen;
+    }
+
+    public void setSeen(boolean seen) {
+        this.seen = seen;
+    }
+
     @Override
     public String toString() {
         return "Notification{" +
                 "id=" + id +
+                ", details='" + details + '\'' +
+                ", notTime=" + notTime +
                 ", post=" + post +
                 ", user=" + user +
                 '}';

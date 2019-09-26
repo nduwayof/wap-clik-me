@@ -17,6 +17,11 @@
         </li>
 
         <li>
+            <i class="ti-files"></i>
+            <a href="following" title="">Following</a>
+        </li>
+
+        <li>
             <i class="ti-user"></i>
             <a href="peopleNearby" title="">Find Nearby Users</a>
         </li>
@@ -29,7 +34,7 @@
 
         <li>
             <i class="ti-bell"></i>
-            <a href="javascript:void(0)" title="">Notifications</a>
+            <a href="notifications" title="">Notifications</a>
         </li>
 
         <li>
