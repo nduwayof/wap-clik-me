@@ -61,7 +61,7 @@ public class HomeServlet extends HttpServlet {
 
                 session.setAttribute("notifications",notificationDao.findAll());
 
-                req.setAttribute("posts",postService.getPostsUserHome(user));
+                session.setAttribute("posts",postService.getPostsUserHome(user));
 
                 RequestDispatcher rd = req.getRequestDispatcher("views/user/home2.jsp");
                 rd.forward(req, resp);

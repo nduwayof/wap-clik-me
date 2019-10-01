@@ -16,12 +16,12 @@ public class UserTest {
 
     public static void main(String[] args) {
         User user = new User();
-        user.setFirstName("Fabrice");
-        user.setLastName("Nduwayo");
-        user.setGender("Male");
-        user.setEmail("nduwayof@gmail.com");
+        user.setFirstName("Bisrat");
+        user.setLastName("KIdane");
+        user.setGender("Female");
+        user.setEmail("bsur91@gmail.com");
         user.setAccess("user");
-        user.setPassword("fabrice");
+        user.setPassword("12345");
         IUserDao userDao = new UserDao();
         userDao.create(user);
     }
